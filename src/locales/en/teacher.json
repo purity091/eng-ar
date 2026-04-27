@@ -1,0 +1,19 @@
+{
+  "dashboard": {
+    "title": "Teacher Dashboard",
+    "eyebrow": "Overview",
+    "description": "Welcome back! Here is what's happening with your students today."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "students": "Students",
+    "analytics": "Analytics",
+    "plans": "AI Plans",
+    "homework": "Homework",
+    "messages": "Parent Messages",
+    "schedule": "Schedule",
+    "smartSessions": "Smart Sessions",
+    "reports": "Reports",
+    "riskAlerts": "Risk Alerts"
+  }
+}

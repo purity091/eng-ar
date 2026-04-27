@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mint-50: #f0fdfa;
+  --mint-100: #ccfbf1;
+  --mint-200: #99f6e4;
+  --mint-300: #5eead4;
+  --mint-400: #2dd4bf;
+  --mint-500: #14b8a6;
+  --mint-600: #0d9488;
+  --mint-700: #0f766e;
+  --mint-800: #115e59;
+  --mint-900: #134e4a;
+  --brand-blue: #3b82f6;
+  --brand-orange: #f97316;
+  --brand-violet: #8b5cf6;
+  --brand-yellow: #fbbf24;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+.font-outfit,
+.font-cairo {
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-soft {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Shadows */
+.shadow-premium {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-mint-glow {
+  box-shadow: 0 10px 25px -5px rgba(20, 184, 166, 0.2);
+}
+
+.shadow-orange-glow {
+  box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.2);
+}
+
+/* Utility Classes */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Custom Mint Colors for Tailwind */
+@layer utilities {
+  .bg-mint-50 { background-color: var(--mint-50); }
+  .bg-mint-100 { background-color: var(--mint-100); }
+  .bg-mint-200 { background-color: var(--mint-200); }
+  .bg-mint-300 { background-color: var(--mint-300); }
+  .bg-mint-400 { background-color: var(--mint-400); }
+  .bg-mint-500 { background-color: var(--mint-500); }
+  .bg-mint-600 { background-color: var(--mint-600); }
+  .bg-mint-700 { background-color: var(--mint-700); }
+  .bg-mint-800 { background-color: var(--mint-800); }
+  .bg-mint-900 { background-color: var(--mint-900); }
+  
+  .text-mint-50 { color: var(--mint-50); }
+  .text-mint-100 { color: var(--mint-100); }
+  .text-mint-200 { color: var(--mint-200); }
+  .text-mint-300 { color: var(--mint-300); }
+  .text-mint-400 { color: var(--mint-400); }
+  .text-mint-500 { color: var(--mint-500); }
+  .text-mint-600 { color: var(--mint-600); }
+  .text-mint-700 { color: var(--mint-700); }
+  .text-mint-800 { color: var(--mint-800); }
+  .text-mint-900 { color: var(--mint-900); }
+  
+  .border-mint-100 { border-color: var(--mint-100); }
+  .border-mint-200 { border-color: var(--mint-200); }
+  .border-mint-300 { border-color: var(--mint-300); }
+  .border-mint-400 { border-color: var(--mint-400); }
+  .border-mint-500 { border-color: var(--mint-500); }
+  .border-mint-600 { border-color: var(--mint-600); }
+  .border-mint-700 { border-color: var(--mint-700); }
+}

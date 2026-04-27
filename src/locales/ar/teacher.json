@@ -1,0 +1,19 @@
+{
+  "dashboard": {
+    "title": "لوحة المعلم",
+    "eyebrow": "نظرة عامة",
+    "description": "أهلًا بك مجددًا. إليك ما يحدث مع طلابك اليوم."
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "students": "الطلاب",
+    "analytics": "التحليلات",
+    "plans": "الخطط الذكية",
+    "homework": "الواجبات",
+    "messages": "رسائل الأهل",
+    "schedule": "الجدول",
+    "smartSessions": "الجلسات الذكية",
+    "reports": "التقارير",
+    "riskAlerts": "تنبيهات الخطر"
+  }
+}

@@ -1,0 +1,887 @@
+{
+  "landing": {
+    "nav": {
+      "how": "How It Works",
+      "teachers": "Teachers",
+      "results": "Results",
+      "plans": "Plans",
+      "login": "Login",
+      "cta": "Start Free"
+    },
+    "hero": {
+      "badge": "The leading platform for teaching English with native teachers",
+      "titleBefore": "Your child will speak",
+      "titleHighlight": "with a native accent",
+      "titleAfter": "with confidence.",
+      "description": "We combine native teachers with AI-powered progress tracking in a safe and enjoyable experience designed for Arab children.",
+      "primaryCta": "Start the placement test",
+      "secondaryCta": "Meet the teachers",
+      "rating": "From more than 3,000 happy families"
+    },
+    "preview": {
+      "teacherLabel": "Teacher Emma",
+      "teacherMeta": "Native Speaker - London",
+      "liveNow": "Live now",
+      "sentence": "Well done, Omar! Now say: The cat is in the bag.",
+      "pronunciation": "Pronunciation accuracy",
+      "newWords": "New words"
+    },
+    "trusted": {
+      "title": "Built around global English teaching standards",
+      "logos": [
+        "CAMBRIDGE",
+        "OXFORD",
+        "BRITISH COUNCIL",
+        "PEARSON",
+        "TOEFL"
+      ]
+    },
+    "features": {
+      "badge": "The real advantage",
+      "title": "Why native teachers?",
+      "description": "Traditional teaching may explain grammar, but it rarely builds real speaking fluency. Readmint focuses on how children actually hear, repeat, and speak.",
+      "checks": [
+        "Teachers from the UK and USA",
+        "100% safe learning environment"
+      ],
+      "items": [
+        {
+          "title": "Authentic pronunciation",
+          "desc": "Children learn the sounds from the source, not from a translated accent.",
+          "tone": "indigo"
+        },
+        {
+          "title": "Confidence in speaking",
+          "desc": "Early exposure reduces fear and makes English feel natural.",
+          "tone": "rose"
+        },
+        {
+          "title": "Cultural awareness",
+          "desc": "Language becomes a living way of expression, not a memorized subject.",
+          "tone": "emerald"
+        },
+        {
+          "title": "Teaching quality",
+          "desc": "Certified teachers with experience working with children online.",
+          "tone": "amber"
+        }
+      ]
+    },
+    "results": {
+      "badge": "Smart reporting",
+      "title": "Clear visibility into what your child is learning.",
+      "description": "Parents can review performance, pronunciation milestones, and home reinforcement tasks every week.",
+      "items": [
+        {
+          "title": "Session recordings",
+          "desc": "Review every live lesson whenever you need."
+        },
+        {
+          "title": "Pronunciation indicators",
+          "desc": "Spot real pronunciation improvement over time."
+        },
+        {
+          "title": "Home tasks",
+          "desc": "Simple follow-up activities for parents."
+        }
+      ],
+      "report": {
+        "student": "Omar Fahd",
+        "level": "Level Two - Week 4",
+        "mastery": "Mastery score",
+        "skills": [
+          "Conversation",
+          "Listening",
+          "Grammar"
+        ],
+        "recommendationTitle": "Platform recommendation for next week",
+        "recommendationText": "Focus on consonant sound drills to push pronunciation above 90%."
+      }
+    },
+    "pricing": {
+      "badge": "Term plans",
+      "title": "Choose one term or a full year",
+      "description": "Subscriptions are built around academic terms, with clear outputs and measurable goals.",
+      "popular": "Most selected",
+      "subscribe": "Subscribe for the term",
+      "plans": [
+        {
+          "name": "Foundation",
+          "price": "2,490",
+          "duration": "per term",
+          "highlight": false,
+          "features": [
+            "2 live sessions weekly",
+            "Interactive tasks and homework",
+            "End-of-term parent report",
+            "Best for KG and early grades"
+          ]
+        },
+        {
+          "name": "Progress",
+          "price": "4,490",
+          "duration": "per term",
+          "highlight": true,
+          "features": [
+            "3 live sessions weekly",
+            "AI pronunciation analysis",
+            "Weekly plus final reports",
+            "Best for primary students"
+          ]
+        },
+        {
+          "name": "Mastery",
+          "price": "7,990",
+          "duration": "per term",
+          "highlight": false,
+          "features": [
+            "4 to 5 live sessions weekly",
+            "Dedicated teacher and daily AI coach",
+            "Personalized learning plan",
+            "Strong fluency and speaking outcomes"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "A better future starts with one correct word.",
+      "description": "Join thousands of families who chose Readmint as a serious English-learning partner.",
+      "primary": "Start the free placement test",
+      "secondary": "Talk to an education advisor"
+    }
+  },
+  "pricing": {
+    "heroBadge": "Pricing tailored by age and stage",
+    "heroTitle": "Invest in the learning outcome, not just in sessions.",
+    "heroDescription": "Choose the learner stage and compare packages built for real academic progress.",
+    "billing": {
+      "term": "Single term",
+      "annual": "Full year (3 terms)",
+      "save": "Save 20%"
+    },
+    "gradeLevels": [
+      {
+        "id": "kg",
+        "title": "Kindergarten (KG)",
+        "packages": [
+          {
+            "id": "kg_foundation",
+            "name": "Young Foundations",
+            "subtitle": "Interactive start",
+            "priceSemester": "2,490",
+            "priceAnnual": "5,970",
+            "entryLevel": "Complete beginner (Pre-A1)",
+            "targetLevel": "Letters and phonics awareness",
+            "highlight": false,
+            "outcomes": [
+              "2 live sessions weekly",
+              "Phonics and sound awareness",
+              "Play-based English activities",
+              "Mid-term parent progress review"
+            ]
+          },
+          {
+            "id": "kg_plus",
+            "name": "Confident Start",
+            "subtitle": "Early speaking confidence",
+            "priceSemester": "3,890",
+            "priceAnnual": "9,330",
+            "entryLevel": "Knows some letters",
+            "targetLevel": "Simple words and routine phrases",
+            "highlight": true,
+            "outcomes": [
+              "3 live sessions weekly",
+              "Vocabulary growth through repetition",
+              "AI-supported speaking encouragement",
+              "Weekly parent update"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "primary_lower",
+        "title": "Primary Grades (1-3)",
+        "packages": [
+          {
+            "id": "primary_core",
+            "name": "Core Building",
+            "subtitle": "Sentence formation",
+            "priceSemester": "3,290",
+            "priceAnnual": "7,890",
+            "entryLevel": "Basic words",
+            "targetLevel": "Correct simple sentences",
+            "highlight": false,
+            "outcomes": [
+              "2 live sessions weekly",
+              "Reading short stories",
+              "Core grammar practice",
+              "Automated homework"
+            ]
+          },
+          {
+            "id": "primary_fluency",
+            "name": "Early Fluency",
+            "subtitle": "The young speaker",
+            "priceSemester": "4,990",
+            "priceAnnual": "11,970",
+            "entryLevel": "Simple sentence maker",
+            "targetLevel": "Basic conversation confidence",
+            "highlight": true,
+            "outcomes": [
+              "3 to 4 live sessions weekly",
+              "Conversation-first practice",
+              "Weekly pronunciation insights",
+              "Reading challenges and points"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "primary_upper",
+        "title": "Upper Primary (4-6)",
+        "packages": [
+          {
+            "id": "upper_speaking",
+            "name": "Speaking Track",
+            "subtitle": "Practical communication",
+            "priceSemester": "3,990",
+            "priceAnnual": "9,570",
+            "entryLevel": "Beginner to intermediate",
+            "targetLevel": "Confident communication",
+            "highlight": false,
+            "outcomes": [
+              "3 live sessions weekly",
+              "Discussion topics aligned with interests",
+              "Writing and spelling support",
+              "Short automated quizzes"
+            ]
+          },
+          {
+            "id": "upper_mastery",
+            "name": "Mastery Track",
+            "subtitle": "Near-native growth",
+            "priceSemester": "6,490",
+            "priceAnnual": "15,570",
+            "entryLevel": "Intermediate",
+            "targetLevel": "Advanced fluency growth",
+            "highlight": true,
+            "outcomes": [
+              "5 intensive live sessions weekly",
+              "International-school teaching style",
+              "Debates and critical thinking",
+              "Daily AI pronunciation coach"
+            ]
+          }
+        ]
+      }
+    ],
+    "mostRequested": "Most balanced and requested",
+    "perMonth": "Pay {{amount}} SAR / month",
+    "installments": "Split into 4 interest-free payments.",
+    "entryLevel": "Entry level",
+    "targetLevel": "Target outcome",
+    "startTest": "Take the placement test",
+    "pillars": [
+      {
+        "title": "Clear structure",
+        "description": "The academic year is split into three terms aligned with school calendars."
+      },
+      {
+        "title": "Term-based pacing",
+        "description": "Each term gives enough time to build and retain the targeted skills."
+      },
+      {
+        "title": "Transparent reporting",
+        "description": "Parents get a clear dashboard to track weekly progress."
+      }
+    ],
+    "parentView": {
+      "title": "What does the parent actually see?",
+      "description": "Every learner gets a parent-facing dashboard with clear KPIs and progress indicators.",
+      "items": [
+        "Weekly vocabulary growth tracking.",
+        "AI-based pronunciation accuracy trend.",
+        "Actual sentence usage inside live sessions.",
+        "End-of-term report and next-term recommendation."
+      ],
+      "student": "Omar Fahd",
+      "mastery": "Pronunciation mastery",
+      "skills": [
+        "Live speaking",
+        "Listening",
+        "New vocabulary"
+      ]
+    },
+    "cta": {
+      "title": "Ready to start the fluency journey?",
+      "description": "Begin with a free placement test and get the most suitable package recommendation.",
+      "primary": "Start the free test",
+      "secondary": "Contact support"
+    }
+  },
+  "curriculum": {
+    "heroBadge": "Our curriculum",
+    "heroTitle": "Built for the mind and personality of Arab children.",
+    "heroDescription": "We do not import rigid content. We build a path that respects language transfer challenges and leads toward real speaking fluency.",
+    "methodologyTitle": "How we teach",
+    "methodology": [
+      {
+        "title": "Gamified learning",
+        "desc": "Every lesson feels like progress, with points and visible wins that keep children engaged.",
+        "color": "orange"
+      },
+      {
+        "title": "Language immersion",
+        "desc": "Native-teacher sessions expose children to correct spoken English every week.",
+        "color": "blue"
+      },
+      {
+        "title": "AI tracking",
+        "desc": "We identify pronunciation and fluency obstacles common among Arab learners.",
+        "color": "indigo"
+      }
+    ],
+    "levelsTitle": "A structured journey toward mastery",
+    "levelsSubtitle": "From first sounds to full conversations.",
+    "levels": [
+      {
+        "id": "pre-a1",
+        "name": "Foundation Level (Pre-A1)",
+        "alias": "The Explorers",
+        "age": "Ages 5-7",
+        "focus": "Phonics and core vocabulary",
+        "desc": "This stage builds a positive relationship with English through sounds, visuals, and short routines.",
+        "topics": [
+          "Letters and sounds",
+          "Numbers and colors",
+          "Family and animals",
+          "Daily greetings"
+        ],
+        "tone": "sky",
+        "bg": "sky"
+      },
+      {
+        "id": "a1",
+        "name": "Beginner Level (A1)",
+        "alias": "The Creators",
+        "age": "Ages 7-9",
+        "focus": "Sentence building and simple speaking",
+        "desc": "Children begin forming correct sentences and expressing simple needs and ideas.",
+        "topics": [
+          "Simple sentences",
+          "Articles and basics",
+          "Describing objects and places",
+          "Present simple"
+        ],
+        "tone": "indigo",
+        "bg": "indigo"
+      },
+      {
+        "id": "a2",
+        "name": "Developing Level (A2)",
+        "alias": "The Storytellers",
+        "age": "Ages 9-12",
+        "focus": "Fluency and independent reading",
+        "desc": "The focus shifts toward storytelling, longer comprehension, and more natural dialogue.",
+        "topics": [
+          "Past and future tenses",
+          "Short stories",
+          "Simple journal writing",
+          "Open conversation"
+        ],
+        "tone": "violet",
+        "bg": "violet"
+      }
+    ],
+    "comparison": {
+      "title": "Why is the Readmint curriculum different?",
+      "subtitle": "Because it is designed around the actual obstacles Arab learners face.",
+      "challengesTitle": "Common challenges",
+      "solutionsTitle": "Readmint solutions",
+      "challenges": [
+        "Confusing sounds like P and B because they do not exist the same way in Arabic.",
+        "Literal translation from Arabic into English sentence order.",
+        "Fear of making mistakes while speaking."
+      ],
+      "solutions": [
+        "Targeted mouth-position and sound drills.",
+        "Sentence-pattern correction before memorization.",
+        "Safe one-on-one or small-group speaking practice."
+      ]
+    },
+    "cta": {
+      "title": "Ready to identify your child's level?",
+      "primary": "Start the free placement test",
+      "secondary": "View pricing plans"
+    }
+  },
+  "teachers": {
+    "heroBadge": "A curated native-teacher team",
+    "heroTitle": "Our teachers are not just instructors. They are motivating companions for children.",
+    "heroDescription": "We select a very small percentage of applicants to ensure native fluency, teaching quality, and child-safe delivery.",
+    "searchPlaceholder": "Search by teacher name or specialty...",
+    "filters": [
+      "All",
+      "British",
+      "American",
+      "Canadian"
+    ],
+    "allFilterLabel": "All",
+    "experience": "Experience",
+    "viewProfile": "View full profile",
+    "teachers": [
+      {
+        "id": 1,
+        "name": "Emma Watson",
+        "origin": "London, UK",
+        "accent": "British (RP)",
+        "specialty": "Phonics & Storytelling",
+        "experience": "8 years",
+        "rating": 4.9,
+        "reviewCount": 420,
+        "bio": "Emma helps younger learners speak with confidence through story-led repetition and phonics practice.",
+        "tags": [
+          "Patient",
+          "Fun",
+          "Phonics expert"
+        ],
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200",
+        "available": true,
+        "filter": "British"
+      },
+      {
+        "id": 2,
+        "name": "James Miller",
+        "origin": "New York, USA",
+        "accent": "American (Standard)",
+        "specialty": "Conversation & Grammar",
+        "experience": "6 years",
+        "rating": 5,
+        "reviewCount": 310,
+        "bio": "James builds speaking confidence while correcting common grammar mistakes in a relaxed way.",
+        "tags": [
+          "High energy",
+          "Grammar expert",
+          "Games"
+        ],
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200",
+        "available": true,
+        "filter": "American"
+      },
+      {
+        "id": 3,
+        "name": "Sarah Connor",
+        "origin": "Toronto, Canada",
+        "accent": "Canadian",
+        "specialty": "Vocabulary Building",
+        "experience": "10 years",
+        "rating": 4.8,
+        "reviewCount": 560,
+        "bio": "Sarah supports older learners with vocabulary growth and structured speaking habits.",
+        "tags": [
+          "Organized",
+          "Older learners",
+          "Balanced"
+        ],
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
+        "available": false,
+        "filter": "Canadian"
+      },
+      {
+        "id": 4,
+        "name": "David Beckham",
+        "origin": "Manchester, UK",
+        "accent": "British",
+        "specialty": "Creative Writing",
+        "experience": "5 years",
+        "rating": 4.7,
+        "reviewCount": 180,
+        "bio": "David makes reading and writing feel visual and enjoyable for A1 and A2 learners.",
+        "tags": [
+          "Creative",
+          "Visual",
+          "Calm"
+        ],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
+        "available": true,
+        "filter": "British"
+      }
+    ],
+    "qualityTitle": "Strict standards for your child's safety.",
+    "qualityDescription": "We hire for both language quality and child-safe teaching behavior.",
+    "qualityItems": [
+      {
+        "title": "Background checks",
+        "desc": "Every teacher goes through a formal screening process in their home country."
+      },
+      {
+        "title": "Certified teaching",
+        "desc": "Teachers hold recognized qualifications such as TEFL or CELTA."
+      },
+      {
+        "title": "Ongoing monitoring",
+        "desc": "Sessions are reviewed regularly to maintain teaching quality."
+      }
+    ],
+    "qualityCtaTitle": "Ready to learn with the best teachers?",
+    "qualityCtaDescription": "After the placement test, we help you choose the best-fit teacher.",
+    "qualityCtaButton": "Start the placement test"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "Everything you need to know about the platform and the plans.",
+    "items": [
+      {
+        "question": "How is my child's level determined?",
+        "answer": "We use a free placement assessment at the start to measure vocabulary, listening, pronunciation, and basic speaking, then recommend the most suitable package."
+      },
+      {
+        "question": "Who teaches on the platform?",
+        "answer": "All teachers are native English speakers from countries such as the UK, the USA, and Canada, with recognized teaching credentials."
+      },
+      {
+        "question": "What if my child misses a live session?",
+        "answer": "If you notify us at least 24 hours in advance, the session can be rescheduled. Without prior notice, it is counted as missed."
+      },
+      {
+        "question": "Can I track my child's progress?",
+        "answer": "Yes. Parents get dashboards, weekly reports, and session records showing measurable progress over time."
+      },
+      {
+        "question": "Which package is best to start with?",
+        "answer": "That depends on the placement result, but the Progress package fits many children because it balances live teaching and independent reinforcement."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "We are here to answer your questions and help you choose the best option for your child.",
+    "infoTitle": "Contact details",
+    "emailLabel": "Email",
+    "emailText": "We reply to all emails within 24 hours.",
+    "phoneLabel": "Phone",
+    "phoneText": "Available Sunday to Thursday, 9 AM to 5 PM.",
+    "locationLabel": "Head office",
+    "locationValue": "Riyadh, Saudi Arabia",
+    "formTitle": "Send us a message",
+    "submittedTitle": "Message sent successfully!",
+    "submittedDescription": "We will get back to you as soon as possible.",
+    "fields": {
+      "name": "Name",
+      "phone": "Mobile number",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your full name",
+      "phone": "Optional",
+      "email": "your@email.com",
+      "message": "How can we help you?"
+    },
+    "submit": "Send message"
+  },
+  "terms": {
+    "title": "Terms and conditions",
+    "updated": "Last updated: October 1, 2023",
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "body": "By using Readmint, you agree to these terms. The platform is designed to provide high-quality online English education for children through native teachers and structured plans."
+      },
+      {
+        "title": "2. Intellectual property",
+        "body": "All platform materials, including text, visuals, audio, video, and software, remain the property of Readmint and may not be reused without written permission."
+      },
+      {
+        "title": "3. Subscription and payment",
+        "list": [
+          "Services are offered on a term-based subscription model.",
+          "Payment is collected in advance to reserve the student's seat.",
+          "Fees are generally non-refundable after the first week of the term.",
+          "Missed sessions require notice at least 24 hours ahead for rescheduling."
+        ]
+      },
+      {
+        "title": "4. User conduct",
+        "body": "Parents and learners are expected to follow respectful conduct during sessions. Readmint may suspend accounts in cases of abuse or unsafe behavior."
+      },
+      {
+        "title": "5. Changes to the terms",
+        "body": "We may update these terms when needed and will notify users of material changes through the platform or by email."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "description": "We are committed to protecting your data and your child's data.",
+    "sections": [
+      {
+        "title": "1. Data we collect",
+        "body": "We collect only the information required to deliver personalized learning, such as the student name, age, level, guardian email, and performance records."
+      },
+      {
+        "title": "2. How we use the data",
+        "list": [
+          "To personalize the learning plan based on the child's level.",
+          "To generate reports for parents and guardians.",
+          "To improve pronunciation evaluation systems using anonymized data only.",
+          "To manage billing and subscriptions."
+        ]
+      },
+      {
+        "title": "3. Child privacy and recordings",
+        "body": "Session recordings are stored securely for quality review and parent access only, and they are limited to authorized roles."
+      },
+      {
+        "title": "4. Third-party sharing",
+        "body": "We do not sell user data. Limited data may be shared only with trusted service providers such as payment partners under strong protection standards."
+      },
+      {
+        "title": "5. Your rights",
+        "body": "Parents may request a copy of the child data or request deletion after the subscription ends, subject to legal and operational obligations."
+      }
+    ]
+  },
+  "placementTest": {
+    "navTitle": "Placement test",
+    "introBadge": "The result determines the best-fit term package",
+    "introTitle": "Start the smart assessment in 5 minutes",
+    "introDescription": "The assessment checks vocabulary, listening, core grammar, and simple expression. At the end, the parent receives a recommended package and a learning target.",
+    "introCards": [
+      {
+        "label": "Short duration",
+        "value": "About 5 minutes"
+      },
+      {
+        "label": "Goal",
+        "value": "Accurate level estimate"
+      },
+      {
+        "label": "Outcome",
+        "value": "A full-term recommendation"
+      }
+    ],
+    "start": "Start the test now",
+    "questionOf": "Question {{current}} of {{total}}",
+    "playAudio": "Play audio",
+    "resultBadge": "Assessment completed successfully",
+    "resultTitle": "Placement test result",
+    "resultDescription": "This recommendation is based on the answers and is designed for one full academic term.",
+    "score": "Score",
+    "entryLevel": "Entry level",
+    "recommendedPackage": "Recommended package",
+    "planTitle": "Suggested term plan",
+    "targetLevel": "Target outcome",
+    "comparePackages": "Compare packages",
+    "startSubscription": "Start subscription for the current term",
+    "viewParentDashboard": "View parent dashboard example",
+    "results": {
+      "A0": {
+        "subtitle": "Foundation",
+        "targetLevel": "Early phonics and vocabulary awareness",
+        "weeklyLiveSessions": "2 live sessions weekly",
+        "kpis": [
+          {
+            "label": "Phonics awareness",
+            "target": "Clear sound recognition"
+          },
+          {
+            "label": "Core vocabulary",
+            "target": "50-100 words"
+          },
+          {
+            "label": "Participation",
+            "target": "Comfort in live class"
+          }
+        ]
+      },
+      "A1": {
+        "subtitle": "Progress",
+        "targetLevel": "Simple sentence confidence",
+        "weeklyLiveSessions": "3 live sessions weekly",
+        "kpis": [
+          {
+            "label": "Sentence use",
+            "target": "Short correct sentences"
+          },
+          {
+            "label": "Pronunciation",
+            "target": "Visible weekly improvement"
+          },
+          {
+            "label": "Listening",
+            "target": "Better response accuracy"
+          }
+        ]
+      },
+      "A2": {
+        "subtitle": "Mastery",
+        "targetLevel": "Longer speaking and stronger fluency",
+        "weeklyLiveSessions": "4 to 5 live sessions weekly",
+        "kpis": [
+          {
+            "label": "Fluency",
+            "target": "Longer spoken responses"
+          },
+          {
+            "label": "Vocabulary",
+            "target": "Fast measurable growth"
+          },
+          {
+            "label": "Conversation",
+            "target": "More natural dialogue"
+          }
+        ]
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "category": "Core vocabulary",
+        "prompt": "Choose the correct translation of the word: Apple",
+        "options": [
+          {
+            "id": "a",
+            "label": "تفاحة",
+            "correct": true
+          },
+          {
+            "id": "b",
+            "label": "Chair",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "label": "Car",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "category": "Listening",
+        "prompt": "You heard the word Cat. Which option is correct?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Dog",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "label": "Cat",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "label": "Car",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "category": "Grammar",
+        "prompt": "Complete the sentence: I ___ a student.",
+        "options": [
+          {
+            "id": "a",
+            "label": "am",
+            "correct": true
+          },
+          {
+            "id": "b",
+            "label": "is",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "label": "are",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "category": "Comprehension",
+        "prompt": "Choose the sentence that means: I like reading.",
+        "options": [
+          {
+            "id": "a",
+            "label": "I like reading.",
+            "correct": true
+          },
+          {
+            "id": "b",
+            "label": "I reading like.",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "label": "Me like read.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "category": "Speaking",
+        "prompt": "If someone asks What is your name?, which answer fits best?",
+        "options": [
+          {
+            "id": "a",
+            "label": "My name is Sara.",
+            "correct": true
+          },
+          {
+            "id": "b",
+            "label": "I am eight old.",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "label": "Blue and red.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  },
+  "joinTeam": {
+    "title": "Apply to join as a teacher",
+    "description": "Complete the form below and we will review your application soon.",
+    "successTitle": "Your application has been received",
+    "successDescription": "Thank you for applying. We will review your application and contact you within 3 to 5 business days.",
+    "confirmation": "We will send a confirmation to: {{email}}",
+    "backHome": "Back to home",
+    "fields": {
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone number",
+      "specialization": "Specialization",
+      "experience": "Years of experience",
+      "bio": "Short bio"
+    },
+    "placeholders": {
+      "fullName": "Full name",
+      "email": "name@example.com",
+      "phone": "+9665xxxxxxxx",
+      "specialization": "Example: English language",
+      "experience": "Example: 5 years",
+      "bio": "Write a short summary about your experience and teaching style"
+    },
+    "submit": "Submit application",
+    "submitting": "Submitting...",
+    "noteTitle": "Note",
+    "noteBody": "This demo version stores applications locally in the browser.",
+    "errors": {
+      "fullName": "Full name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Email is invalid",
+      "phone": "Phone number is required",
+      "specialization": "Specialization is required",
+      "experience": "Years of experience are required",
+      "bio": "Please write at least 30 characters"
+    }
+  }
+}

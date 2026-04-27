@@ -1,0 +1,287 @@
+﻿{
+  "home": {
+    "badge": "English learning operations platform",
+    "title": "Main Operations Dashboard",
+    "description": "This page is the unified entry point for all platform roles. From here you can jump directly to parent, student, teacher, and admin experiences.",
+    "openTeacher": "Open teacher hub",
+    "openParent": "Go to parent dashboard",
+    "roleSection": {
+      "eyebrow": "Role-based access",
+      "title": "Platform Interfaces",
+      "description": "Each interface is designed for a specific role and daily workflow."
+    },
+    "quickSection": {
+      "eyebrow": "Quick navigation",
+      "title": "Common Tasks",
+      "description": "Fast shortcuts to the most-used pages."
+    },
+    "enter": "Enter",
+    "goNow": "Go now",
+    "roleCards": [
+      {
+        "title": "Parent Portal",
+        "description": "Track student progress, weekly reports, attendance, and subscription details.",
+        "meta": "Reports + monitoring"
+      },
+      {
+        "title": "Student Dashboard",
+        "description": "Daily tasks, voice practice, live class, and rewards.",
+        "meta": "Interactive learning"
+      },
+      {
+        "title": "Teacher Hub",
+        "description": "Smart session prep, student profiles, reports, and fast actions.",
+        "meta": "Teacher AI Command Center"
+      },
+      {
+        "title": "Admin Panel",
+        "description": "Manage students, teachers, schedules, curriculum, and subscriptions.",
+        "meta": "Platform operations"
+      }
+    ],
+    "stats": [
+      { "label": "Active students", "hint": "+8% this month" },
+      { "label": "Sessions today", "hint": "Strong attendance" },
+      { "label": "Average growth index", "hint": "+5 points" },
+      { "label": "Active subscriptions", "hint": "High renewal rate" }
+    ],
+    "quickActions": [
+      {
+        "title": "Placement test",
+        "description": "A quick assessment to identify the best learning path before starting."
+      },
+      {
+        "title": "Pricing plans",
+        "description": "Review package options and pick the suitable plan for each age group."
+      },
+      {
+        "title": "Curriculum",
+        "description": "Browse levels and curriculum units tailored for Arab children."
+      }
+    ]
+  },
+  "classroom": {
+    "level": "Foundation Level - Lesson 4",
+    "topic": "Today's Topic: My Family",
+    "connection": "Connection is very stable",
+    "stars": "{{count}} stars",
+    "slide": "Slide {{current}} / {{total}}",
+    "teacher": "Teacher Emma",
+    "teacherLocation": "London, UK",
+    "you": "You (Omar Fahd)",
+    "live": "LIVE",
+    "chatTitle": "Live chat",
+    "viewAll": "View all",
+    "teacherMessage": "Great job, Omar!",
+    "starMessage": "Your teacher sent you an encouragement star!",
+    "chatPlaceholder": "Write a message...",
+    "raiseHand": "Raise your hand",
+    "remainingTime": "Remaining time",
+    "endSession": "End session"
+  },
+  "student": {
+    "dailyPractice": {
+      "eyebrow": "Daily Practice",
+      "title": "Today activity in 5 to 10 minutes",
+      "description": "Short flow: listen, choose, then check. Designed to avoid fatigue.",
+      "questionTitle": "Where is the cat?",
+      "questionDescription": "Listen to the word, then pick the correct image.",
+      "listen": "Listen",
+      "check": "Check",
+      "listenAgain": "Listen again",
+      "pronunciationTitle": "Pronunciation activity",
+      "pronunciationDescription": "Hear the word then record your voice. The goal is confidence, not perfection.",
+      "sortingTitle": "Word sorting activity",
+      "sortingDescription": "I / like / apples -> reorder it to I like apples."
+    },
+    "liveClass": {
+      "eyebrow": "Live class",
+      "title": "Live class",
+      "description": "Student live-class experience with teacher video and simple tools.",
+      "teacher": "Teacher Emma",
+      "student": "Omar",
+      "mute": "Mute",
+      "camera": "Camera",
+      "shareScreen": "Share screen",
+      "lessonCards": "Lesson cards",
+      "timer": "Session timer",
+      "currentActivity": "Current activity: conversation practice",
+      "phases": "Class phases"
+    },
+    "rewards": {
+      "eyebrow": "Rewards and challenges",
+      "title": "Stars and achievements",
+      "description": "Track stars, streaks, and badges earned through daily effort.",
+      "stars": "Earned stars",
+      "streak": "Streak days",
+      "level": "Character progress",
+      "nextLevel": "Next stage: level 5",
+      "galleryTitle": "Achievements gallery",
+      "galleryDescription": "Each badge reflects a real step in your learning journey.",
+      "badgeUnlocked": "Achievement unlocked",
+      "nextAchievement": "Next achievement",
+      "needStars": "Need 5 more stars"
+    },
+    "voicePractice": {
+      "eyebrow": "Voice practice",
+      "title": "Voice recording",
+      "description": "Listen, record, retry, then send.",
+      "targetSentence": "Target sentence",
+      "sentenceTip": "Listen slowly, then say it once or twice.",
+      "listen": "Listen",
+      "record": "Record your voice",
+      "retry": "Retry",
+      "send": "Send to teacher"
+    }
+  },
+  "parent": {
+    "childProgress": {
+      "eyebrow": "Child progress",
+      "title": "{{name}} progress",
+      "description": "Parents can clearly see current progress, completed outcomes, and next learning stage.",
+      "scoreLabel": "English progress index",
+      "scoreNote": "Good monthly improvement. Extra pronunciation support is still needed.",
+      "skillsTitle": "Skills breakdown",
+      "planTitle": "12-week learning plan",
+      "planDescription": "A clear timeline from current stage to final term evaluation."
+    },
+    "audioProgress": {
+      "eyebrow": "Before and after",
+      "title": "Before and after recordings",
+      "description": "Compare voice samples with short teacher notes.",
+      "score": "Score",
+      "sample": "Voice sample",
+      "play": "Play",
+      "summary": "The student now has clearer short-sentence pronunciation, but still needs V sound support."
+    },
+    "sessions": {
+      "eyebrow": "Sessions",
+      "title": "Sessions and package",
+      "description": "A simple view of upcoming and completed sessions for parents.",
+      "details": "View details",
+      "completed": "Completed"
+    },
+    "billing": {
+      "eyebrow": "Billing",
+      "title": "Package and payment",
+      "description": "Subscriptions are term-based, not monthly. Choose one term minimum or annual (three terms).",
+      "minimumSubscription": "Minimum subscription",
+      "availableTerms": "Available terms",
+      "annual": "Annual subscription",
+      "status": "Status",
+      "active": "Active",
+      "approvedTerms": "Approved school terms",
+      "packageOptions": "Per-term package options"
+    }
+  },
+  "teacher": {
+    "sessionBrief": {
+      "eyebrow": "Pre-session intelligence",
+      "title": "AI session brief: {{id}}",
+      "description": "Instant AI-synthesized context for your upcoming session.",
+      "launch": "Launch session",
+      "studentProfile": "Student profile",
+      "previousLesson": "Previous lesson",
+      "identifiedGaps": "Identified gaps",
+      "targetObjective": "Target objective",
+      "targetVocabulary": "Target vocabulary",
+      "strategy": "AI pedagogical strategy",
+      "behavior": "Historical behavior",
+      "plan": "Execution plan"
+    },
+    "sessionLive": {
+      "eyebrow": "Live classroom",
+      "title": "AI assessment studio",
+      "description": "Integrated live session environment with real-time support.",
+      "instructor": "Instructor",
+      "student": "Sara Ahmed (Student)",
+      "highEngagement": "High engagement",
+      "shareScreen": "Share screen",
+      "liveAssessment": "1-click live assessment",
+      "editPrompts": "Edit prompts",
+      "sessionTimer": "Session timer",
+      "targetDuration": "Target duration: 25:00",
+      "pacingGuide": "AI pacing guide",
+      "aiSuggestion": "AI suggestion"
+    },
+    "sessionSummary": {
+      "eyebrow": "Post-session wrap-up",
+      "title": "AI assessment synthesis",
+      "description": "Finalize rubric and send parent reports in under a minute.",
+      "capturedMetrics": "AI captured metrics",
+      "autofilled": "Auto-filled",
+      "observations": "1-click observations",
+      "customNote": "+ Custom note",
+      "reportGeneration": "AI report generation",
+      "communicationTone": "Select communication tone",
+      "actionRequired": "Action required",
+      "encouraging": "Encouraging",
+      "comprehensive": "Comprehensive",
+      "generatedOutput": "Generated output",
+      "dispatch": "Dispatch report & close session"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Overview",
+      "description": "Welcome to the admin dashboard. Here is today’s platform performance summary.",
+      "totalStudents": "Total students",
+      "activeBooks": "Active books",
+      "viewedLessons": "Viewed lessons",
+      "contentReports": "Content reports",
+      "recentActivity": "Recent activity",
+      "quickActions": "Quick actions",
+      "addBook": "Add new book",
+      "inviteTeacher": "Invite teacher",
+      "exportReports": "Export reports",
+      "newStudentJoined": "New student joined the platform",
+      "newStudentJoinedDesc": "A new account was registered by Ahmed Mohammed in grade 10.",
+      "twoMinutesAgo": "2 minutes ago"
+    },
+    "students": {
+      "eyebrow": "Admin / Students",
+      "title": "Students management",
+      "description": "Core MVP student table: profile, level, plan, and status.",
+      "student": "Student",
+      "age": "Age",
+      "grade": "Grade",
+      "level": "Level",
+      "plan": "Plan",
+      "status": "Status",
+      "active": "Active"
+    },
+    "teachers": {
+      "eyebrow": "Admin / Teachers",
+      "title": "Teachers management",
+      "description": "Teacher cards for specialty, accent, capacity, rating, and current load.",
+      "accent": "Accent",
+      "dailyCapacity": "Daily capacity",
+      "sessions": "sessions",
+      "rating": "Rating",
+      "currentLoad": "Current load"
+    },
+    "schedule": {
+      "eyebrow": "Admin / Schedule",
+      "title": "Schedule management",
+      "description": "Initial weekly scheduling interface with overload alerting.",
+      "sessions": "Sessions"
+    },
+    "curriculum": {
+      "eyebrow": "Admin / Curriculum",
+      "title": "Curriculum and tracks",
+      "description": "Manage units and lessons in a simple first version.",
+      "targetWords": "Target words",
+      "skills": "Skills"
+    },
+    "subscriptions": {
+      "eyebrow": "Admin / Subscriptions",
+      "title": "Subscriptions overview",
+      "description": "Connect progress quality to retention and renewal expectations.",
+      "student": "Student",
+      "growthScore": "Growth score",
+      "attendance": "Attendance",
+      "expectedStatus": "Expected status",
+      "intervention": "Needs intervention"
+    }
+  }
+}
