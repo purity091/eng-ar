@@ -1,12 +1,13 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, LogIn, Sparkles, UserPlus } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useApp } from '../../contexts/AppContext';
+import LanguageSwitcher from '../../components/layout/LanguageSwitcher';
 
 const StudentAuthPage: React.FC = () => {
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const { loginStudent, loginWithPhone } = useApp();
     const [mode, setMode] = useState<'register' | 'login'>('register');
     const [name, setName] = useState('');
@@ -48,7 +49,10 @@ const StudentAuthPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[linear-gradient(135deg,#fff7ed,#eff6ff)]" dir="rtl">
+        <div className="min-h-screen bg-[linear-gradient(135deg,#fff7ed,#eff6ff)] relative" dir={i18n.dir()}>
+            <div className={`fixed top-6 ${i18n.dir() === 'rtl' ? 'left-6' : 'right-6'} z-50`}>
+                <LanguageSwitcher />
+            </div>
             <div className="mx-auto grid min-h-screen max-w-7xl lg:grid-cols-2">
                 <div className="hidden bg-slate-950 p-10 text-white lg:flex lg:flex-col lg:justify-between">
                     <div className="flex items-center gap-3">

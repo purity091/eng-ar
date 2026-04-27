@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { BarChart3, BrainCircuit, CheckCircle2, ChevronRight, ClipboardList, Clock3, FileText, Gamepad2, MessageSquareMore, Mic2, Radar, Send, ShieldAlert, Sparkles, Target, TimerReset, TrendingUp, UserRound, Waves, ArrowRight, Lightbulb, Activity } from 'lucide-react';
 import SectionHeader from '../../components/platform/SectionHeader';
 
@@ -48,12 +49,13 @@ const liveAssistant = [
 ];
 
 const TeacherStudentProfilePage: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <div className="space-y-10 pb-16 font-outfit">
             <SectionHeader
-                eyebrow="Student AI Profile"
-                title="AI Student Intelligence"
-                description="A comprehensive profile that synthesizes diagnostics, automated lesson plans, and auto-generated reports, eliminating manual prep work."
+                eyebrow={t('appPages.teacher.profile.eyebrow')}
+                title={t('appPages.teacher.profile.title')}
+                description={t('appPages.teacher.profile.description')}
             />
 
             <div className="grid gap-8 xl:grid-cols-[0.95fr,1.05fr]">
@@ -98,7 +100,7 @@ const TeacherStudentProfilePage: React.FC = () => {
                             <BrainCircuit size={24} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black text-slate-900">AI Learning Diagnosis</h2>
+                            <h2 className="text-2xl font-black text-slate-900">{t('appPages.teacher.profile.diagnosis')}</h2>
                             <p className="text-sm font-medium text-slate-500">Clear diagnostics ending with causes and direct recommendations.</p>
                         </div>
                     </div>
@@ -142,7 +144,7 @@ const TeacherStudentProfilePage: React.FC = () => {
                                 <Radar size={20} />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-black text-slate-900">Skills Radar</h2>
+                                <h2 className="text-2xl font-black text-slate-900">{t('appPages.teacher.profile.radar')}</h2>
                                 <p className="text-sm font-medium text-slate-500">Visual breakdown with interpreted context per skill.</p>
                             </div>
                         </div>
@@ -202,7 +204,7 @@ const TeacherStudentProfilePage: React.FC = () => {
                                 <ClipboardList size={20} />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-black text-slate-900">Auto Learning Plan</h2>
+                                <h2 className="text-2xl font-black text-slate-900">{t('appPages.teacher.profile.plan')}</h2>
                                 <p className="text-sm font-medium text-slate-500">Ready-to-use weekly plan for review or regeneration.</p>
                             </div>
                         </div>
@@ -303,7 +305,7 @@ const TeacherStudentProfilePage: React.FC = () => {
                             <Sparkles size={24} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black text-white">Live AI Assistant</h2>
+                            <h2 className="text-2xl font-black text-white">{t('appPages.teacher.profile.assistant')}</h2>
                             <p className="text-sm font-medium text-indigo-200">Real-time side panel during active sessions.</p>
                         </div>
                     </div>
@@ -341,7 +343,7 @@ const TeacherStudentProfilePage: React.FC = () => {
                             <FileText size={24} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black text-slate-900">Post-Session Auto Report</h2>
+                            <h2 className="text-2xl font-black text-slate-900">{t('appPages.teacher.profile.report')}</h2>
                             <p className="text-sm font-medium text-slate-500">Drafted automatically based on session data. Edit only if needed.</p>
                         </div>
                     </div>

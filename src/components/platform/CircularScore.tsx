@@ -3,10 +3,11 @@ import React from 'react';
 interface CircularScoreProps {
     score: number;
     label: string;
+    summary?: string;
     note?: string;
 }
 
-const CircularScore: React.FC<CircularScoreProps> = ({ score, label, note }) => {
+const CircularScore: React.FC<CircularScoreProps> = ({ score, label, summary, note }) => {
     const angle = Math.min(100, Math.max(0, score)) * 3.6;
 
     return (
@@ -26,7 +27,7 @@ const CircularScore: React.FC<CircularScoreProps> = ({ score, label, note }) => 
 
                 <div className="max-w-xl space-y-2 text-center lg:text-right">
                     <h2 className="text-2xl font-bold text-slate-900">{label}</h2>
-                    <p className="text-lg text-slate-600">تحسن جيد هذا الشهر</p>
+                    {summary && <p className="text-lg text-slate-600">{summary}</p>}
                     {note && <p className="leading-8 text-slate-500">{note}</p>}
                 </div>
             </div>

@@ -1,46 +1,29 @@
-import React, { useMemo, useState } from 'react';
+﻿import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { CheckCircle2, FileText, Send, ShieldAlert, Sparkles, BrainCircuit, Target, MessageSquareQuote } from 'lucide-react';
 import SectionHeader from '../../components/platform/SectionHeader';
-
-const quickMatrix = [
-    { skill: 'Attendance', value: 'Present', tone: 'emerald' },
-    { skill: 'Engagement', value: 'High', tone: 'emerald' },
-    { skill: 'Pronunciation', value: 'Needs Review', tone: 'amber' },
-    { skill: 'Vocabulary', value: 'Partial Mastery', tone: 'amber' },
-    { skill: 'Speaking Confidence', value: 'Hesitant', tone: 'rose' },
-];
-
-const quickActions = [
-    'Mastered today\'s words',
-    'Needs P/B sound review',
-    'Needs V/F sound drill',
-    'Incomplete previous homework',
-    'Clear improvement in confidence',
-];
 
 type SummaryReportTone = 'warning' | 'encouragement' | 'full';
 
 const SessionSummaryPage: React.FC = () => {
+    const { t } = useTranslation();
     const [tone, setTone] = useState<SummaryReportTone>('full');
 
+    const quickMatrix = t('appPages.teacher.sessionSummary.quickMatrix', { returnObjects: true }) as Array<{ skill: string; value: string; tone: 'emerald' | 'amber' | 'rose' }>;
+    const quickActions = t('appPages.teacher.sessionSummary.quickActions', { returnObjects: true }) as string[];
+
     const generatedSummary = useMemo(() => {
-        if (tone === 'warning') {
-            return 'Important Update: Sara attended today\'s session, but pronunciation requires targeted review, specifically for words like "fish" and "bird". The previous assignment was also incomplete. We strongly recommend a 5-minute daily listening activity before the next session.';
-        }
-
-        if (tone === 'encouragement') {
-            return 'Great Progress: Sara showed wonderful engagement today! She demonstrated growing confidence when repeating sentences and successfully mastered the words "cat", "dog", and "bird". A quick daily review will help maintain this fantastic momentum.';
-        }
-
-        return 'Comprehensive Session Report: Sara was present and highly engaged. She mastered the target words "cat", "dog", and "bird", though "fish" requires further practice. Pronunciation is improving but still needs support with specific fricative sounds. Next Step: An automated 7-minute "Animals Listening" activity has been assigned to her dashboard.';
-    }, [tone]);
+        if (tone === 'warning') return t('appPages.teacher.sessionSummary.generated.warning');
+        if (tone === 'encouragement') return t('appPages.teacher.sessionSummary.generated.encouragement');
+        return t('appPages.teacher.sessionSummary.generated.full');
+    }, [tone, t]);
 
     return (
         <div className="space-y-10 pb-16 font-outfit">
             <SectionHeader
-                eyebrow="Post-Session Wrap-up"
-                title="AI Assessment Synthesis"
-                description="Finalize rubrics and dispatch auto-generated parent reports in under 60 seconds."
+                eyebrow={t('appPages.teacher.sessionSummary.eyebrow')}
+                title={t('appPages.teacher.sessionSummary.title')}
+                description={t('appPages.teacher.sessionSummary.description')}
             />
 
             <div className="grid gap-8 xl:grid-cols-[1fr,1.1fr]">
@@ -48,22 +31,21 @@ const SessionSummaryPage: React.FC = () => {
                     <div className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm">
                         <div className="mb-6 flex items-center justify-between">
                             <div className="flex items-center gap-3 text-slate-900">
-                                <div className="p-2 bg-indigo-100 text-indigo-600 rounded-xl">
-                                    <Target size={20} />
-                                </div>
-                                <h3 className="text-xl font-black">AI Captured Metrics</h3>
+                                <div className="rounded-xl bg-indigo-100 p-2 text-indigo-600"><Target size={20} /></div>
+                                <h3 className="text-xl font-black">{t('appPages.teacher.sessionSummary.capturedMetrics')}</h3>
                             </div>
-                            <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded-md">Auto-filled</span>
+                            <span className="rounded-md bg-slate-100 px-2 py-1 text-xs font-bold text-slate-500">{t('appPages.teacher.sessionSummary.autofilled')}</span>
                         </div>
-                        
+
                         <div className="space-y-3">
                             {quickMatrix.map((item) => (
-                                <div key={item.skill} className="flex items-center justify-between rounded-2xl bg-slate-50/50 border border-slate-100 px-5 py-4 group hover:bg-white hover:shadow-sm transition-all">
+                                <div key={item.skill} className="group flex items-center justify-between rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-4 transition-all hover:bg-white hover:shadow-sm">
                                     <span className="font-bold text-slate-700">{item.skill}</span>
                                     <div className="flex items-center gap-2">
-                                        <span className={`text-xs font-black uppercase tracking-wider px-2.5 py-1 rounded-lg ${
-                                            item.tone === 'emerald' ? 'bg-emerald-100 text-emerald-700' : 
-                                            item.tone === 'rose' ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'
+                                        <span className={`rounded-lg px-2.5 py-1 text-xs font-black uppercase tracking-wider ${
+                                            item.tone === 'emerald' ? 'bg-emerald-100 text-emerald-700' :
+                                            item.tone === 'rose' ? 'bg-rose-100 text-rose-700' :
+                                            'bg-amber-100 text-amber-700'
                                         }`}>
                                             {item.value}
                                         </span>
@@ -73,22 +55,20 @@ const SessionSummaryPage: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full pointer-events-none"></div>
-                        <div className="mb-6 flex items-center gap-3 text-slate-900 relative z-10">
-                            <div className="p-2 bg-indigo-100 text-indigo-600 rounded-xl">
-                                <CheckCircle2 size={20} />
-                            </div>
-                            <h3 className="text-xl font-black">1-Click Observations</h3>
+                    <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm">
+                        <div className="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-indigo-50" />
+                        <div className="relative z-10 mb-6 flex items-center gap-3 text-slate-900">
+                            <div className="rounded-xl bg-indigo-100 p-2 text-indigo-600"><CheckCircle2 size={20} /></div>
+                            <h3 className="text-xl font-black">{t('appPages.teacher.sessionSummary.observations')}</h3>
                         </div>
-                        <div className="flex flex-wrap gap-3 relative z-10">
+                        <div className="relative z-10 flex flex-wrap gap-3">
                             {quickActions.map((item) => (
-                                <button key={item} className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-indigo-200 hover:text-indigo-700 transition-all text-left">
+                                <button key={item} className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-left text-sm font-bold text-slate-700 transition-all hover:border-indigo-200 hover:bg-slate-50 hover:text-indigo-700">
                                     {item}
                                 </button>
                             ))}
-                            <button className="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-sm font-bold text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all text-left">
-                                + Custom Note
+                            <button className="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-left text-sm font-bold text-slate-500 transition-all hover:border-indigo-300 hover:text-indigo-600">
+                                {t('appPages.teacher.sessionSummary.customNote')}
                             </button>
                         </div>
                     </div>
@@ -97,50 +77,46 @@ const SessionSummaryPage: React.FC = () => {
                 <div className="space-y-6">
                     <div className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm">
                         <div className="mb-6 flex items-center gap-3 text-slate-900">
-                            <div className="p-2 bg-slate-100 text-slate-700 rounded-xl">
-                                <BrainCircuit size={20} />
-                            </div>
-                            <h3 className="text-xl font-black">AI Report Generation</h3>
+                            <div className="rounded-xl bg-slate-100 p-2 text-slate-700"><BrainCircuit size={20} /></div>
+                            <h3 className="text-xl font-black">{t('appPages.teacher.sessionSummary.reportGeneration')}</h3>
                         </div>
 
-                        <label className="block text-xs font-black uppercase tracking-wider text-slate-500 mb-3">Select Communication Tone</label>
-                        <div className="grid gap-3 sm:grid-cols-3 mb-8">
+                        <label className="mb-3 block text-xs font-black uppercase tracking-wider text-slate-500">{t('appPages.teacher.sessionSummary.communicationTone')}</label>
+                        <div className="mb-8 grid gap-3 sm:grid-cols-3">
                             <button
                                 onClick={() => setTone('warning')}
-                                className={`rounded-xl px-4 py-4 text-sm font-black flex flex-col items-center gap-2 transition-all ${tone === 'warning' ? 'bg-rose-600 text-white shadow-md shadow-rose-600/20' : 'bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100'}`}
+                                className={`flex flex-col items-center gap-2 rounded-xl px-4 py-4 text-sm font-black transition-all ${tone === 'warning' ? 'bg-rose-600 text-white shadow-md shadow-rose-600/20' : 'border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100'}`}
                             >
                                 <ShieldAlert size={20} />
-                                Action Required
+                                {t('appPages.teacher.sessionSummary.actionRequired')}
                             </button>
                             <button
                                 onClick={() => setTone('encouragement')}
-                                className={`rounded-xl px-4 py-4 text-sm font-black flex flex-col items-center gap-2 transition-all ${tone === 'encouragement' ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20' : 'bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100'}`}
+                                className={`flex flex-col items-center gap-2 rounded-xl px-4 py-4 text-sm font-black transition-all ${tone === 'encouragement' ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20' : 'border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100'}`}
                             >
                                 <Sparkles size={20} />
-                                Encouraging
+                                {t('appPages.teacher.sessionSummary.encouraging')}
                             </button>
                             <button
                                 onClick={() => setTone('full')}
-                                className={`rounded-xl px-4 py-4 text-sm font-black flex flex-col items-center gap-2 transition-all ${tone === 'full' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100'}`}
+                                className={`flex flex-col items-center gap-2 rounded-xl px-4 py-4 text-sm font-black transition-all ${tone === 'full' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100'}`}
                             >
                                 <FileText size={20} />
-                                Comprehensive
+                                {t('appPages.teacher.sessionSummary.comprehensive')}
                             </button>
                         </div>
 
-                        <div className="rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50/50 to-white p-6 relative">
-                            <div className="flex items-center gap-2 mb-3 text-xs font-black uppercase tracking-wider text-indigo-500">
+                        <div className="relative rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50/50 to-white p-6">
+                            <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-indigo-500">
                                 <MessageSquareQuote size={14} />
-                                Generated Output
+                                {t('appPages.teacher.sessionSummary.generatedOutput')}
                             </div>
-                            <p className="leading-relaxed font-medium text-slate-700 min-h-[120px]">
-                                {generatedSummary}
-                            </p>
+                            <p className="min-h-[120px] font-medium leading-relaxed text-slate-700">{generatedSummary}</p>
                         </div>
 
-                        <button className="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-6 py-4 text-sm font-black text-white hover:bg-slate-800 transition-colors shadow-lg shadow-slate-900/10">
+                        <button className="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-6 py-4 text-sm font-black text-white shadow-lg shadow-slate-900/10 transition-colors hover:bg-slate-800">
                             <Send size={18} />
-                            Dispatch Report & Close Session
+                            {t('appPages.teacher.sessionSummary.dispatch')}
                         </button>
                     </div>
                 </div>

@@ -1,7 +1,8 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart3, CheckCircle2, Globe, Headphones, Heart, Mic2, PlayCircle, Sparkles, Star, Target, Trophy, Video, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../components/layout/LanguageSwitcher';
 
 const toneMap = {
     indigo: 'bg-indigo-600',
@@ -14,7 +15,7 @@ const iconMap = [Headphones, Zap, Globe, Trophy];
 const resultIconMap = [Video, BarChart3, Target];
 
 const LandingPage: React.FC = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const featureItems = t('pages.landing.features.items', { returnObjects: true }) as Array<{ title: string; desc: string; tone: keyof typeof toneMap }>;
     const resultItems = t('pages.landing.results.items', { returnObjects: true }) as Array<{ title: string; desc: string }>;
     const plans = t('pages.landing.pricing.plans', { returnObjects: true }) as Array<{ name: string; price: string; duration: string; highlight: boolean; features: string[] }>;
@@ -23,7 +24,7 @@ const LandingPage: React.FC = () => {
     const skills = t('pages.landing.results.report.skills', { returnObjects: true }) as string[];
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900" dir="rtl">
+        <div className="min-h-screen bg-white font-sans text-slate-900" dir={i18n.dir()}>
             <div className="fixed inset-0 -z-10 overflow-hidden">
                 <div className="absolute -left-[10%] -top-[10%] h-[50%] w-[50%] rounded-full bg-indigo-50/50 blur-[120px]" />
                 <div className="absolute -right-[10%] top-[20%] h-[40%] w-[40%] rounded-full bg-rose-50/40 blur-[100px]" />
@@ -48,6 +49,7 @@ const LandingPage: React.FC = () => {
                             <Link to="/pricing" className="transition-all hover:text-indigo-600">{t('pages.landing.nav.plans')}</Link>
                         </div>
                         <div className="flex items-center gap-3">
+                            <LanguageSwitcher />
                             <Link to="/join" className="hidden px-5 py-2.5 text-sm font-black text-slate-600 transition-all hover:text-slate-950 md:block">{t('pages.landing.nav.login')}</Link>
                             <Link to="/placement-test" className="group relative flex items-center gap-2 overflow-hidden rounded-xl bg-indigo-600 px-6 py-3 text-sm font-black text-white shadow-lg shadow-indigo-200 transition-all hover:scale-105 active:scale-95">
                                 <span className="relative z-10 flex items-center gap-2">{t('pages.landing.nav.cta')} <ArrowRight size={16} /></span>

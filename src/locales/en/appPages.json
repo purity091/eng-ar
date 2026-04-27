@@ -1,4 +1,4 @@
-﻿{
+{
   "home": {
     "badge": "English learning operations platform",
     "title": "Main Operations Dashboard",
@@ -40,10 +40,22 @@
       }
     ],
     "stats": [
-      { "label": "Active students", "hint": "+8% this month" },
-      { "label": "Sessions today", "hint": "Strong attendance" },
-      { "label": "Average growth index", "hint": "+5 points" },
-      { "label": "Active subscriptions", "hint": "High renewal rate" }
+      {
+        "label": "Active students",
+        "hint": "+8% this month"
+      },
+      {
+        "label": "Sessions today",
+        "hint": "Strong attendance"
+      },
+      {
+        "label": "Average growth index",
+        "hint": "+5 points"
+      },
+      {
+        "label": "Active subscriptions",
+        "hint": "High renewal rate"
+      }
     ],
     "quickActions": [
       {
@@ -132,6 +144,16 @@
       "record": "Record your voice",
       "retry": "Retry",
       "send": "Send to teacher"
+    },
+    "dashboard": {
+      "eyebrow": "Student dashboard",
+      "title": "Today learning mission",
+      "description": "Track mission progress, skills, and rewards from one place.",
+      "missionProgress": "Mission progress",
+      "startMission": "Start mission",
+      "liveClass": "Join live class",
+      "strengths": "Skill scores",
+      "checklist": "Today checklist"
     }
   },
   "parent": {
@@ -140,10 +162,32 @@
       "title": "{{name}} progress",
       "description": "Parents can clearly see current progress, completed outcomes, and next learning stage.",
       "scoreLabel": "English progress index",
+      "scoreSummary": "Good improvement this month",
       "scoreNote": "Good monthly improvement. Extra pronunciation support is still needed.",
       "skillsTitle": "Skills breakdown",
       "planTitle": "12-week learning plan",
-      "planDescription": "A clear timeline from current stage to final term evaluation."
+      "planDescription": "A clear timeline from current stage to final term evaluation.",
+      "studentName": "Omar Fahd",
+      "skills": [
+        { "label": "Vocabulary", "value": 82, "tone": "bg-emerald-500" },
+        { "label": "Pronunciation", "value": 61, "tone": "bg-orange-500" },
+        { "label": "Listening", "value": 70, "tone": "bg-sky-500" },
+        { "label": "Speaking", "value": 66, "tone": "bg-violet-500" },
+        { "label": "Attendance", "value": 90, "tone": "bg-amber-500" }
+      ],
+      "timeline": [
+        { "week": "Week 1", "title": "Diagnostics", "status": "completed", "goal": "Identify core vocabulary and confidence level in response." },
+        { "week": "Week 2", "title": "Vocabulary Building", "status": "completed", "goal": "Build understanding of school, animal, and color words." },
+        { "week": "Week 4", "title": "Sound Training", "status": "active", "goal": "Differentiate between P and B sounds.", "task": "Listen and repeat 10 words." },
+        { "week": "Week 6", "title": "Short Sentences", "status": "upcoming", "goal": "Use I can see and I have got structures." },
+        { "week": "Week 9", "title": "Reading", "status": "upcoming", "goal": "Read short sentences with visual support." },
+        { "week": "Week 12", "title": "Final Evaluation", "status": "upcoming", "goal": "Measure pronunciation and speaking growth." }
+      ],
+      "statusLabels": {
+        "completed": "Completed",
+        "active": "In progress",
+        "upcoming": "Upcoming"
+      }
     },
     "audioProgress": {
       "eyebrow": "Before and after",
@@ -152,14 +196,22 @@
       "score": "Score",
       "sample": "Voice sample",
       "play": "Play",
-      "summary": "The student now has clearer short-sentence pronunciation, but still needs V sound support."
+      "summary": "The student now has clearer short-sentence pronunciation, but still needs V sound support.",
+      "records": [
+        { "label": "Before the program", "date": "January 1", "score": 42, "note": "Hesitates before completing the sentence." },
+        { "label": "After 8 weeks", "date": "February 28", "score": 71, "note": "Much clearer in short sentences." }
+      ]
     },
     "sessions": {
       "eyebrow": "Sessions",
       "title": "Sessions and package",
       "description": "A simple view of upcoming and completed sessions for parents.",
       "details": "View details",
-      "completed": "Completed"
+      "completed": "Completed",
+      "records": [
+        { "day": "Sunday", "time": "4:00 PM", "title": "Animal conversation", "mode": "1:1 live", "status": "Completed", "tone": "emerald" },
+        { "day": "Tuesday", "time": "5:00 PM", "title": "My school bag", "mode": "Group live", "status": "Upcoming", "tone": "amber" }
+      ]
     },
     "billing": {
       "eyebrow": "Billing",
@@ -172,53 +224,644 @@
       "active": "Active",
       "approvedTerms": "Approved school terms",
       "packageOptions": "Per-term package options"
+    },
+    "dashboard": {
+      "eyebrow": "Parent dashboard",
+      "title": "Parent overview",
+      "description": "Monitor child progress, term performance, and quick actions.",
+      "kpiTitle": "Key indicators",
+      "journeyTitle": "Learning journey",
+      "weekSummary": "Week summary",
+      "quickActions": "Quick actions",
+      "profile": {
+        "name": "Omar Fahd",
+        "gradeTerm": "Grade 2 • Term 2"
+      },
+      "kpis": [
+        { "label": "Progress score", "value": "76/100" },
+        { "label": "Attendance rate", "value": "92%" },
+        { "label": "Sessions completed", "value": "29/33" },
+        { "label": "Current package", "value": "Progress Term" }
+      ],
+      "highlights": [
+        "Vocabulary growth: +32%",
+        "Pronunciation progress: +18%",
+        "Listening score: 79/100"
+      ],
+      "journey": [
+        "Week 1-2: Diagnostics completed",
+        "Week 3-8: Core learning in progress",
+        "Week 9-11: Speaking application"
+      ],
+      "weeklySummaryItems": [
+        { "label": "18 new words", "icon": "trend" },
+        { "label": "4 voice exercises", "icon": "calendar" },
+        { "label": "37 minutes of practice", "icon": "report" }
+      ],
+      "actions": [
+        { "label": "Progress details", "path": "/parent/child/omar-01/progress" },
+        { "label": "Term report", "path": "/parent/child/omar-01/reports" },
+        { "label": "Renew package", "path": "/parent/billing" }
+      ]
+    },
+    "reports": {
+      "eyebrow": "Child reports",
+      "title": "Detailed learning report",
+      "description": "A complete view of strengths, support areas, and home actions.",
+      "strengths": "Current strengths",
+      "supportAreas": "Support areas",
+      "vocabTitle": "Vocabulary progress",
+      "homeCenter": "Home follow-up center",
+      "strengthItems": [
+        "Understands simple instructions quickly.",
+        "Vocabulary retention is improving week by week.",
+        "Sentence length is getting longer during live speaking."
+      ],
+      "supportItems": [
+        "Needs faster response at the beginning of speaking.",
+        "Still confuses some pronunciation pairs.",
+        "Homework submission timing needs consistency."
+      ],
+      "vocabulary": ["cat", "dog", "bird", "fish", "school", "bag", "book", "play"],
+      "homeCards": [
+        {
+          "title": "Homework",
+          "description": "Practice 10 target words with voice repetition for 15 minutes.",
+          "tone": "emerald"
+        },
+        {
+          "title": "Parent advice",
+          "description": "Use short daily speaking prompts and praise effort before correcting mistakes.",
+          "tone": "amber"
+        }
+      ],
+      "contactNote": "Contact the teacher for clarification if needed."
     }
   },
   "teacher": {
     "sessionBrief": {
-      "eyebrow": "Pre-session intelligence",
-      "title": "AI session brief: {{id}}",
-      "description": "Instant AI-synthesized context for your upcoming session.",
-      "launch": "Launch session",
+      "eyebrow": "Pre-Session Intelligence",
+      "title": "AI Session Brief: {{id}}",
+      "description": "Instant, AI-synthesized context for your upcoming session. Focus on the student, not the preparation.",
+      "launch": "Launch Session",
       "studentProfile": "Student profile",
-      "previousLesson": "Previous lesson",
-      "identifiedGaps": "Identified gaps",
-      "targetObjective": "Target objective",
-      "targetVocabulary": "Target vocabulary",
+      "previousLesson": "Previous Lesson",
+      "identifiedGaps": "Identified Gaps",
+      "targetObjective": "Target Objective",
+      "targetVocabulary": "Target Vocabulary",
       "strategy": "AI pedagogical strategy",
       "behavior": "Historical behavior",
-      "plan": "Execution plan"
+      "plan": "Execution plan",
+      "grade": "Grade 2",
+      "cefr": "CEFR: Pre-A1",
+      "previousLessonValue": "My School Bag",
+      "identifiedGapsValue": "Short vowels and speaking confidence",
+      "targetObjectiveValue": "Animals + \"I can see...\" structure",
+      "vocab": [
+        "cat",
+        "dog",
+        "bird",
+        "fish"
+      ],
+      "strategyTitle": "AI Pedagogical Strategy",
+      "strategyBody": "The primary goal today is to build vocal confidence. Maintain minimal corrective feedback to keep willingness high. Praise effort over accuracy.",
+      "behaviorTitle": "Historical Behavior",
+      "behaviorBody": "Sara tends to be shy at the beginning of sessions, but opens up significantly when visual interactive games are used.",
+      "executionTitle": "Execution Plan",
+      "planSteps": [
+        "Start with a warm-up visual prompt related to pets.",
+        "Provide short, clear native modeling for the target words.",
+        "Guide the student to form one complete sentence before expanding the activity scope."
+      ]
     },
     "sessionLive": {
-      "eyebrow": "Live classroom",
-      "title": "AI assessment studio",
-      "description": "Integrated live session environment with real-time support.",
+      "eyebrow": "Live Classroom",
+      "title": "AI Assessment Studio",
+      "description": "Integrated video environment with real-time AI behavioral tracking, instant rubric scoring, and dynamic pacing.",
       "instructor": "Instructor",
       "student": "Sara Ahmed (Student)",
-      "highEngagement": "High engagement",
-      "shareScreen": "Share screen",
-      "liveAssessment": "1-click live assessment",
-      "editPrompts": "Edit prompts",
-      "sessionTimer": "Session timer",
-      "targetDuration": "Target duration: 25:00",
-      "pacingGuide": "AI pacing guide",
-      "aiSuggestion": "AI suggestion"
+      "highEngagement": "High Engagement",
+      "shareScreen": "Share Screen",
+      "liveAssessment": "1-Click Live Assessment",
+      "editPrompts": "Edit Prompts",
+      "sessionTimer": "Session Timer",
+      "targetDuration": "Target Duration: 25:00",
+      "pacingGuide": "AI Pacing Guide",
+      "aiSuggestion": "AI suggestion",
+      "quickButtons": [
+        {
+          "text": "Nailed it!",
+          "tone": "emerald"
+        },
+        {
+          "text": "Needs minor help",
+          "tone": "amber"
+        },
+        {
+          "text": "Struggled w/ word",
+          "tone": "rose"
+        },
+        {
+          "text": "Great pronunciation",
+          "tone": "emerald"
+        },
+        {
+          "text": "Lost focus",
+          "tone": "amber"
+        },
+        {
+          "text": "Add to next plan",
+          "tone": "indigo"
+        }
+      ],
+      "phases": [
+        {
+          "label": "Warm-up Chant",
+          "time": "03:00",
+          "status": "completed"
+        },
+        {
+          "label": "Native Modeling",
+          "time": "05:00",
+          "status": "active"
+        },
+        {
+          "label": "Pair Speaking Prompt",
+          "time": "10:00",
+          "status": "pending"
+        },
+        {
+          "label": "Vocabulary Check",
+          "time": "07:00",
+          "status": "pending"
+        }
+      ],
+      "aiSuggestionText": "AI Suggestion: Student is highly engaged. Consider extending the current modeling phase by 2 minutes and compressing the final check."
     },
     "sessionSummary": {
-      "eyebrow": "Post-session wrap-up",
-      "title": "AI assessment synthesis",
-      "description": "Finalize rubric and send parent reports in under a minute.",
-      "capturedMetrics": "AI captured metrics",
+      "eyebrow": "Post-Session Wrap-up",
+      "title": "AI Assessment Synthesis",
+      "description": "Finalize rubrics and dispatch auto-generated parent reports in under 60 seconds.",
+      "capturedMetrics": "AI Captured Metrics",
       "autofilled": "Auto-filled",
-      "observations": "1-click observations",
-      "customNote": "+ Custom note",
-      "reportGeneration": "AI report generation",
-      "communicationTone": "Select communication tone",
-      "actionRequired": "Action required",
+      "observations": "1-Click Observations",
+      "customNote": "+ Custom Note",
+      "reportGeneration": "AI Report Generation",
+      "communicationTone": "Select Communication Tone",
+      "actionRequired": "Action Required",
       "encouraging": "Encouraging",
       "comprehensive": "Comprehensive",
-      "generatedOutput": "Generated output",
-      "dispatch": "Dispatch report & close session"
+      "generatedOutput": "Generated Output",
+      "dispatch": "Dispatch Report & Close Session",
+      "quickMatrix": [
+        {
+          "skill": "Attendance",
+          "value": "Present",
+          "tone": "emerald"
+        },
+        {
+          "skill": "Engagement",
+          "value": "High",
+          "tone": "emerald"
+        },
+        {
+          "skill": "Pronunciation",
+          "value": "Needs Review",
+          "tone": "amber"
+        },
+        {
+          "skill": "Vocabulary",
+          "value": "Partial Mastery",
+          "tone": "amber"
+        },
+        {
+          "skill": "Speaking Confidence",
+          "value": "Hesitant",
+          "tone": "rose"
+        }
+      ],
+      "quickActions": [
+        "Mastered today's words",
+        "Needs P/B sound review",
+        "Needs V/F sound drill",
+        "Incomplete previous homework",
+        "Clear improvement in confidence"
+      ],
+      "generated": {
+        "warning": "Important update: Sara attended today's session, but pronunciation needs targeted review, especially words like fish and bird. Previous homework was also incomplete.",
+        "encouragement": "Great progress: Sara showed strong engagement today and improved confidence while repeating full sentences.",
+        "full": "Comprehensive report: Sara was present and highly engaged. She mastered cat, dog, and bird. Fish still needs practice. Next step: a 7-minute automated Animals Listening activity."
+      }
+    },
+    "students": {
+      "eyebrow": "Student roster",
+      "title": "AI command roster",
+      "description": "Track student status, risk, and next action quickly."
+    },
+    "profile": {
+      "eyebrow": "Student AI profile",
+      "title": "Student intelligence profile",
+      "description": "Diagnostics, plan, live guidance, and post-session outputs.",
+      "diagnosis": "AI diagnosis",
+      "radar": "Skills radar",
+      "plan": "Auto learning plan",
+      "assistant": "Live AI assistant",
+      "report": "Post-session report"
+    },
+    "aiPlans": {
+      "eyebrow": "AI learning paths",
+      "title": "Adaptive lesson plans",
+      "description": "Review and approve AI-generated weekly plans."
+    },
+    "homework": {
+      "eyebrow": "Assignments",
+      "title": "AI homework automation",
+      "description": "Generate, assign, and track smart homework."
+    },
+    "parentMessages": {
+      "eyebrow": "Communication",
+      "title": "AI parent updates",
+      "description": "Review and send personalized parent drafts."
+    },
+    "riskAlerts": {
+      "eyebrow": "Risk and retention",
+      "title": "AI risk alerts",
+      "description": "Detect at-risk students and apply intervention playbooks."
+    },
+    "classAnalytics": {
+      "eyebrow": "Cohort intelligence",
+      "title": "AI class analytics",
+      "description": "Class-wide insights and recommended adjustments."
+    },
+    "studentsPage": {
+      "smartFilters": "Smart Filters",
+      "smartFiltersDesc": "Filter by level, age, risk status, attendance, or weakest skill.",
+      "searchPlaceholder": "Search by name or country",
+      "levelAll": "Level: All",
+      "skillAll": "Weakest Skill: All",
+      "all": "All",
+      "weakest": "Weakest",
+      "columns": {
+        "profile": "Student Profile",
+        "level": "Level",
+        "metrics": "Metrics",
+        "ai": "AI Insight",
+        "status": "Status",
+        "action": "Action"
+      },
+      "statusLabels": {
+        "Stable": "Stable",
+        "Needs Attention": "Needs Attention",
+        "At Risk": "At Risk",
+        "Ready to Advance": "Ready to Advance"
+      },
+      "stats": [
+        {
+          "label": "Total Students",
+          "value": "48",
+          "trend": "+2 this month",
+          "tone": "text-indigo-600",
+          "bg": "bg-indigo-50",
+          "icon": "users"
+        },
+        {
+          "label": "Require Attention",
+          "value": "9",
+          "trend": "Down by 2",
+          "tone": "text-amber-600",
+          "bg": "bg-amber-50",
+          "icon": "alert"
+        },
+        {
+          "label": "Ready for Promotion",
+          "value": "5",
+          "trend": "Consistent",
+          "tone": "text-emerald-600",
+          "bg": "bg-emerald-50",
+          "icon": "check"
+        }
+      ],
+      "records": [
+        {
+          "id": "sara-1",
+          "name": "Sara Ahmed",
+          "age": 8,
+          "country": "Saudi Arabia",
+          "cefr": "A1",
+          "performance": 71,
+          "engagement": 54,
+          "lastAttendance": "Today",
+          "weakestSkill": "Speaking",
+          "planType": "Confidence Recovery",
+          "status": "Needs Attention",
+          "aiInsight": "Needs more visual prompts"
+        },
+        {
+          "id": "omar-1",
+          "name": "Omar Fahd",
+          "age": 7,
+          "country": "UAE",
+          "cefr": "Pre-A1",
+          "performance": 66,
+          "engagement": 61,
+          "lastAttendance": "Yesterday",
+          "weakestSkill": "Pronunciation",
+          "planType": "Homework Recovery",
+          "status": "At Risk",
+          "aiInsight": "Assign phonetic practice"
+        },
+        {
+          "id": "layan-1",
+          "name": "Layan Ahmad",
+          "age": 6,
+          "country": "Saudi Arabia",
+          "cefr": "A1",
+          "performance": 84,
+          "engagement": 88,
+          "lastAttendance": "Today",
+          "weakestSkill": "Grammar",
+          "planType": "Level Upgrade",
+          "status": "Ready to Advance",
+          "aiInsight": "Capable of A2 roleplay"
+        },
+        {
+          "id": "zayn-1",
+          "name": "Zayn Ali",
+          "age": 9,
+          "country": "Qatar",
+          "cefr": "A2",
+          "performance": 73,
+          "engagement": 57,
+          "lastAttendance": "2 days ago",
+          "weakestSkill": "Confidence",
+          "planType": "Engagement Recovery",
+          "status": "Needs Attention",
+          "aiInsight": "Pair with extrovert peer"
+        },
+        {
+          "id": "maya-1",
+          "name": "Maya Noor",
+          "age": 10,
+          "country": "Kuwait",
+          "cefr": "A2",
+          "performance": 79,
+          "engagement": 76,
+          "lastAttendance": "Today",
+          "weakestSkill": "Writing",
+          "planType": "Stable Growth",
+          "status": "Stable",
+          "aiInsight": "Consistently improving"
+        }
+      ]
+    },
+    "aiPlansPage": {
+      "currentWeek": "Current Week's Plans",
+      "currentWeekDesc": "Auto-generated based on last week's diagnostics.",
+      "approveAll": "Approve All Ready",
+      "preview": "Preview Plan",
+      "approve": "Approve",
+      "reviewEdit": "Review & Edit",
+      "smartActions": "Smart Actions",
+      "automateTitle": "Automate your workflow",
+      "automateDesc": "Let AI handle the heavy lifting while you stay in control.",
+      "actions": [
+        "Regenerate All Pending Plans",
+        "Auto-Adjust Difficulty Matrix",
+        "Launch Next Scheduled Session"
+      ],
+      "plans": [
+        {
+          "student": "Sara Ahmed",
+          "plan": "Speaking Confidence Plan",
+          "sessions": "3 Sessions",
+          "duration": "25 min/each",
+          "status": "Ready for Approval",
+          "statusTone": "emerald"
+        },
+        {
+          "student": "Omar Fahad",
+          "plan": "Phonics Recovery Plan",
+          "sessions": "2 Sessions",
+          "duration": "30 min/each",
+          "status": "Needs Review",
+          "statusTone": "amber"
+        },
+        {
+          "student": "Layan Khalid",
+          "plan": "Advanced Reading Comprehension",
+          "sessions": "3 Sessions",
+          "duration": "25 min/each",
+          "status": "Ready for Approval",
+          "statusTone": "emerald"
+        }
+      ]
+    },
+    "homeworkPage": {
+      "stats": [
+        {
+          "label": "Completed",
+          "value": "14",
+          "icon": "done",
+          "tone": "text-emerald-600",
+          "bg": "bg-emerald-50",
+          "border": "border-emerald-100"
+        },
+        {
+          "label": "Overdue",
+          "value": "5",
+          "icon": "overdue",
+          "tone": "text-rose-600",
+          "bg": "bg-rose-50",
+          "border": "border-rose-100"
+        },
+        {
+          "label": "Avg AI Task Duration",
+          "value": "7 mins",
+          "icon": "avg",
+          "tone": "text-indigo-600",
+          "bg": "bg-indigo-50",
+          "border": "border-indigo-100"
+        }
+      ],
+      "queueTitle": "This Week's Queue",
+      "queueDesc": "Targeted exercises tailored to immediate needs.",
+      "queue": [
+        {
+          "student": "Omar Fahad",
+          "task": "School vocabulary review with voice recording",
+          "status": "Pending",
+          "time": "10 mins",
+          "tone": "amber"
+        },
+        {
+          "student": "Sara Ahmed",
+          "task": "Picture-based conversational prompt",
+          "status": "Completed",
+          "time": "6 mins",
+          "tone": "emerald"
+        },
+        {
+          "student": "Layan Khalid",
+          "task": "3-word short sentence reordering",
+          "status": "Overdue",
+          "time": "5 mins",
+          "tone": "rose"
+        }
+      ],
+      "remind": "Remind",
+      "generatorTitle": "AI Generator",
+      "generatorSub": "Create smart tasks instantly.",
+      "generatorDesc": "The platform analyzes student gaps and suggests micro-assignments under 10 minutes.",
+      "generate": "Generate New Assignments",
+      "bulk": "Send Bulk Reminders"
+    },
+    "parentMessagesPage": {
+      "pendingDrafts": "Pending Drafts",
+      "pendingDraftsDesc": "Auto-generated templates ready for review.",
+      "sendNow": "Send Now",
+      "edit": "Edit",
+      "composerTitle": "Custom Composer",
+      "composerSub": "Generate specific messages.",
+      "goalLabel": "Message Goal",
+      "goals": [
+        "Request Schedule Change",
+        "Suggest Extra Practice",
+        "Share Positive Feedback",
+        "Discuss Behavioral Challenge"
+      ],
+      "generateDraft": "Generate Draft",
+      "history": "View Past History",
+      "drafts": [
+        {
+          "type": "Weekly Progress Report",
+          "student": "Omar Fahad",
+          "content": "Omar showed great improvement in vocabulary retention this week. We recommend repeating the visual card game twice over the weekend.",
+          "tone": "indigo"
+        },
+        {
+          "type": "Homework Alert",
+          "student": "Sara Ahmed",
+          "content": "Just a friendly reminder that Sara's speaking assignment is overdue. Let me know if you need any help with the platform.",
+          "tone": "amber"
+        },
+        {
+          "type": "Milestone Celebration",
+          "student": "Layan Khalid",
+          "content": "Layan spoke with incredible confidence today and completed full sentences without hesitation.",
+          "tone": "emerald"
+        }
+      ]
+    },
+    "riskAlertsPage": {
+      "stats": [
+        {
+          "label": "Active Alerts",
+          "value": "2",
+          "tone": "text-rose-600",
+          "bg": "bg-rose-50",
+          "icon": "active"
+        },
+        {
+          "label": "Resolved This Week",
+          "value": "5",
+          "tone": "text-emerald-600",
+          "bg": "bg-emerald-50",
+          "icon": "resolved"
+        },
+        {
+          "label": "Retention Rate",
+          "value": "98%",
+          "tone": "text-indigo-600",
+          "bg": "bg-indigo-50",
+          "icon": "retention"
+        }
+      ],
+      "atRiskTitle": "At-Risk Students",
+      "atRiskDesc": "Requires immediate attention and intervention.",
+      "trigger": "Trigger",
+      "playbook": "AI Playbook",
+      "apply": "Apply Intervention",
+      "notify": "Notify Parent",
+      "risks": [
+        {
+          "student": "Omar Fahad",
+          "level": "High Risk",
+          "trigger": "Engagement dropped significantly over the last 2 sessions. Avoids answering open questions.",
+          "action": "Switch to game-based activities to lower stress and send an encouraging note to parents.",
+          "tone": "rose"
+        },
+        {
+          "student": "Sara Ahmed",
+          "level": "Low Risk",
+          "trigger": "One delayed homework submission.",
+          "action": "Send an automated friendly reminder to the parent.",
+          "tone": "amber"
+        }
+      ]
+    },
+    "classAnalyticsPage": {
+      "topStats": [
+        {
+          "title": "Avg Engagement",
+          "value": "68%",
+          "icon": "engagement",
+          "tone": "text-indigo-600",
+          "bg": "bg-indigo-50",
+          "border": "border-indigo-100",
+          "trend": "+5% this week"
+        },
+        {
+          "title": "Avg Attendance",
+          "value": "92%",
+          "icon": "attendance",
+          "tone": "text-emerald-600",
+          "bg": "bg-emerald-50",
+          "border": "border-emerald-100",
+          "trend": "Stable"
+        },
+        {
+          "title": "Weakest Cohort Skill",
+          "value": "Speaking Confidence",
+          "icon": "weakest",
+          "tone": "text-rose-600",
+          "bg": "bg-rose-50",
+          "border": "border-rose-100",
+          "trend": "Action Required"
+        },
+        {
+          "title": "Top Performing Skill",
+          "value": "Vocabulary",
+          "icon": "top",
+          "tone": "text-amber-600",
+          "bg": "bg-amber-50",
+          "border": "border-amber-100",
+          "trend": "Exceeding target"
+        }
+      ],
+      "insightsTitle": "AI Diagnostic Insights",
+      "insightsDesc": "Synthesized cohort observations from the last 7 days.",
+      "insights": [
+        {
+          "label": "Peak Engagement Window",
+          "content": "Student engagement peaks during the first 12 minutes. Transition to speaking drills before minute 15.",
+          "type": "optimization"
+        },
+        {
+          "label": "Critical Intervention Area",
+          "content": "The cohort struggles most with speaking confidence. Reduce cognitive load with visual aids.",
+          "type": "alert"
+        },
+        {
+          "label": "Schedule Adjustment",
+          "content": "Evening sessions show lower participation. Add game-based activities to boost energy.",
+          "type": "recommendation"
+        }
+      ],
+      "recommendedTitle": "Recommended Action",
+      "recommendedSub": "Apply to upcoming sessions",
+      "restructureTitle": "Cohort Restructuring",
+      "restructureDesc": "Shift this week from grammar accuracy toward communicative fluency to protect engagement.",
+      "autoAdjust": "Auto-Adjust Lesson Plans"
     }
   },
   "admin": {

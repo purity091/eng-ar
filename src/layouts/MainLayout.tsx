@@ -1,11 +1,23 @@
 import React, { useMemo, useState } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Bell, BookOpen, GraduationCap, Home, LogOut, Menu, Mic2, Users, Search, Settings, ChevronRight, Sparkles, BrainCircuit, ClipboardList, FileText, MessageSquareMore, ShieldAlert, BarChart3 } from 'lucide-react';
+import { Bell, BookOpen, GraduationCap, Home, LogOut, Menu, Mic2, Users, Search, Settings, ChevronRight, Sparkles, BrainCircuit, ClipboardList, FileText, MessageSquareMore, ShieldAlert, BarChart3, CalendarDays, Wallet } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useApp } from '../contexts/AppContext';
 import { useNotifications } from '../contexts/NotificationContext';
-import { sidebarSections } from '../constants/platformData';
 import LanguageSwitcher from '../components/layout/LanguageSwitcher';
+
+interface SidebarLinkItem {
+    label: string;
+    path: string;
+    icon: LucideIcon;
+    matchPatterns?: string[];
+}
+
+const matchesRoutePattern = (pathname: string, pattern: string) => {
+    const escapedPattern = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/:[^/]+/g, '[^/]+');
+    return new RegExp(`^${escapedPattern}$`).test(pathname);
+};
 
 const MainLayout: React.FC = () => {
     const { t, i18n } = useTranslation();
@@ -16,18 +28,6 @@ const MainLayout: React.FC = () => {
     const { unreadCount } = useNotifications();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const teacherCommandLinks = useMemo(() => [
-        { label: t('teacher.nav.dashboard'), path: '/teacher/dashboard', icon: BrainCircuit },
-        { label: t('teacher.nav.students'), path: '/teacher/students', icon: Users },
-        { label: t('teacher.nav.smartSessions', 'Smart Sessions'), path: '/teacher/session/sara-1/brief', icon: GraduationCap },
-        { label: t('teacher.nav.plans'), path: '/teacher/ai-plans', icon: ClipboardList },
-        { label: t('teacher.nav.homework'), path: '/teacher/homework', icon: BookOpen },
-        { label: t('teacher.nav.reports', 'Reports'), path: '/teacher/session/sara-1/summary', icon: FileText },
-        { label: t('teacher.nav.messages'), path: '/teacher/parent-messages', icon: MessageSquareMore },
-        { label: t('teacher.nav.riskAlerts', 'Risk Alerts'), path: '/teacher/risk-alerts', icon: ShieldAlert },
-        { label: t('teacher.nav.analytics'), path: '/teacher/class-analytics', icon: BarChart3 },
-    ], [t]);
-
     const section = useMemo(() => {
         if (location.pathname.startsWith('/parent')) return 'parent';
         if (location.pathname.startsWith('/student')) return 'student';
@@ -35,12 +35,70 @@ const MainLayout: React.FC = () => {
         return 'student';
     }, [location.pathname]);
 
+    const roleLinks = useMemo<Record<'parent' | 'student' | 'teacher', SidebarLinkItem[]>>(() => ({
+        parent: [
+            { label: t('nav.parent.dashboard'), path: '/parent/dashboard', icon: Home },
+            { label: t('nav.parent.progress'), path: '/parent/child/omar-01/progress', icon: Users, matchPatterns: ['/parent/child/:id/progress'] },
+            { label: t('nav.parent.reports'), path: '/parent/child/omar-01/reports', icon: FileText, matchPatterns: ['/parent/child/:id/reports'] },
+            { label: t('nav.parent.audio'), path: '/parent/child/omar-01/audio-progress', icon: Mic2, matchPatterns: ['/parent/child/:id/audio-progress'] },
+            { label: t('nav.parent.sessions'), path: '/parent/sessions', icon: CalendarDays },
+            { label: t('nav.parent.billing'), path: '/parent/billing', icon: Wallet },
+        ],
+        student: [
+            { label: t('nav.student.dashboard'), path: '/student/dashboard', icon: Sparkles },
+            { label: t('nav.student.dailyPractice'), path: '/student/daily-practice', icon: BookOpen },
+            { label: t('nav.student.liveClass'), path: '/student/live-class', icon: GraduationCap },
+            { label: t('nav.student.voicePractice'), path: '/student/voice-practice', icon: Mic2 },
+            { label: t('nav.student.rewards'), path: '/student/rewards', icon: Sparkles },
+        ],
+        teacher: [
+            { label: t('teacher.nav.dashboard'), path: '/teacher/dashboard', icon: BrainCircuit },
+            { label: t('teacher.nav.students'), path: '/teacher/students', icon: Users, matchPatterns: ['/teacher/students', '/teacher/students/:id'] },
+            {
+                label: t('teacher.nav.smartSessions', 'Smart Sessions'),
+                path: '/teacher/session/sara-1/brief',
+                icon: GraduationCap,
+                matchPatterns: ['/teacher/session/:id/brief', '/teacher/session/:id/live', '/teacher/session/:id/summary'],
+            },
+            { label: t('teacher.nav.plans'), path: '/teacher/ai-plans', icon: ClipboardList },
+            { label: t('teacher.nav.homework'), path: '/teacher/homework', icon: BookOpen },
+            { label: t('teacher.nav.messages'), path: '/teacher/parent-messages', icon: MessageSquareMore },
+            { label: t('teacher.nav.riskAlerts', 'Risk Alerts'), path: '/teacher/risk-alerts', icon: ShieldAlert },
+            { label: t('teacher.nav.analytics'), path: '/teacher/class-analytics', icon: BarChart3 },
+        ],
+    }), [t]);
+
+    const resourceLinks = useMemo<Record<'parent' | 'student' | 'teacher', SidebarLinkItem[]>>(() => ({
+        parent: [
+            { label: t('nav.curriculum'), path: '/curriculum', icon: BookOpen },
+            { label: t('nav.pricing'), path: '/pricing', icon: Wallet },
+            { label: t('nav.placementTest'), path: '/placement-test', icon: Mic2 },
+        ],
+        student: [
+            { label: t('nav.curriculum'), path: '/curriculum', icon: BookOpen },
+            { label: t('nav.teachers'), path: '/teachers', icon: Users },
+            { label: t('nav.placementTest'), path: '/placement-test', icon: Mic2 },
+        ],
+        teacher: [
+            { label: t('nav.curriculum'), path: '/curriculum', icon: BookOpen },
+            { label: t('nav.teachers'), path: '/teachers', icon: Users },
+            { label: t('nav.placementTest'), path: '/placement-test', icon: Mic2 },
+        ],
+    }), [t]);
+
+    const isItemActive = (item: SidebarLinkItem) => {
+        if (location.pathname === item.path) return true;
+        return item.matchPatterns?.some((pattern) => matchesRoutePattern(location.pathname, pattern)) ?? false;
+    };
+
     const sectionConfig = {
         parent: {
-            title: t('nav.parentPortal', 'Parent Portal'),
-            subtitle: t('nav.parentSubtitle', 'Reports, progress, and subscription'),
+            title: t('nav.parentPortal'),
+            subtitle: t('nav.parentSubtitle'),
             icon: Users,
-            links: sidebarSections.parent.map((item) => ({ ...item, icon: Users })),
+            links: roleLinks.parent,
+            menuTitle: t('nav.parentPanel'),
+            resources: resourceLinks.parent,
             logoClass: 'from-sky-600 to-blue-700',
             shellClass: 'bg-slate-50',
             sidebarClass: 'bg-white/70',
@@ -51,10 +109,12 @@ const MainLayout: React.FC = () => {
             searchFocusClass: 'focus:border-sky-200 focus:bg-white focus:ring-4 focus:ring-sky-50',
         },
         student: {
-            title: t('nav.studentPlatform', 'Learning Platform'),
-            subtitle: t('nav.studentSubtitle', 'Daily practice and live sessions'),
+            title: t('nav.studentPlatform'),
+            subtitle: t('nav.studentSubtitle'),
             icon: Sparkles,
-            links: sidebarSections.student.map((item) => ({ ...item, icon: Sparkles })),
+            links: roleLinks.student,
+            menuTitle: t('nav.studentPanel'),
+            resources: resourceLinks.student,
             logoClass: 'from-orange-500 to-amber-500',
             shellClass: 'bg-[radial-gradient(circle_at_top,_rgba(251,191,36,0.12),_transparent_30%),linear-gradient(to_bottom,_#fff7ed,_#f8fafc)]',
             sidebarClass: 'bg-white/80',
@@ -65,10 +125,12 @@ const MainLayout: React.FC = () => {
             searchFocusClass: 'focus:border-orange-200 focus:bg-white focus:ring-4 focus:ring-orange-50',
         },
         teacher: {
-            title: t('nav.teacherCenter', 'Teacher AI Command Center'),
-            subtitle: t('nav.teacherSubtitle', 'Smart command center to reduce load and speed up decisions'),
+            title: t('nav.teacherCenter'),
+            subtitle: t('nav.teacherSubtitle'),
             icon: GraduationCap,
-            links: teacherCommandLinks,
+            links: roleLinks.teacher,
+            menuTitle: t('nav.teacherPanel'),
+            resources: resourceLinks.teacher,
             logoClass: 'from-indigo-700 to-slate-800',
             shellClass: 'bg-[linear-gradient(to_bottom,_#eef2ff,_#f8fafc_18rem)]',
             sidebarClass: 'bg-slate-950',
@@ -78,7 +140,22 @@ const MainLayout: React.FC = () => {
             headerClass: 'bg-white/90',
             searchFocusClass: 'focus:border-indigo-200 focus:bg-white focus:ring-4 focus:ring-indigo-50',
         },
-    }[section];
+    }[section] as {
+        title: string;
+        subtitle: string;
+        icon: LucideIcon;
+        links: SidebarLinkItem[];
+        menuTitle: string;
+        resources: SidebarLinkItem[];
+        logoClass: string;
+        shellClass: string;
+        sidebarClass: string;
+        activeItemClass: string;
+        activeIconClass: string;
+        activeDotClass: string;
+        headerClass: string;
+        searchFocusClass: string;
+    };
 
     const isTeacher = section === 'teacher';
     const profilePath = isTeacher ? '/teacher/dashboard' : section === 'parent' ? '/parent/dashboard' : '/student/dashboard';
@@ -103,17 +180,17 @@ const MainLayout: React.FC = () => {
                 >
                     <div className="flex items-center gap-3">
                         <Home size={20} className={location.pathname === '/home' ? isTeacher ? 'text-indigo-300' : 'text-orange-400' : isTeacher ? 'text-slate-400 group-hover:text-white' : 'text-slate-400 group-hover:text-slate-900'} />
-                        {t('nav.home', 'Home')}
+                        {t('nav.home')}
                     </div>
                     {location.pathname === '/home' && <ChevronRight size={16} className={`${isRtl ? 'rotate-180' : ''} text-white/50`} />}
                 </Link>
 
                 <div className="my-6 px-4">
-                    <div className="mb-4 text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase">{isTeacher ? t('nav.teacherPanel', 'Teacher Panel') : t('nav.mainMenu', 'Main Menu')}</div>
+                    <div className="mb-4 text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase">{sectionConfig.menuTitle}</div>
                     <div className="space-y-1.5">
                         {sectionConfig.links.map((item) => {
-                            const Icon = 'icon' in item && item.icon ? item.icon : sectionConfig.icon;
-                            const isActive = location.pathname === item.path;
+                            const Icon = item.icon || sectionConfig.icon;
+                            const isActive = isItemActive(item);
                             return (
                                 <Link
                                     key={item.path}
@@ -133,16 +210,23 @@ const MainLayout: React.FC = () => {
                 </div>
 
                 <div className="px-4">
-                    <div className="mb-4 text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase">{t('nav.resources', 'Resources')}</div>
+                    <div className="mb-4 text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase">{t('nav.resources')}</div>
                     <div className="space-y-1.5">
-                        <Link to="/pricing" onClick={() => setIsSidebarOpen(false)} className={`flex items-center gap-3 rounded-2xl px-4 py-3.5 text-sm font-bold transition-all ${isTeacher ? 'text-slate-300 hover:bg-white/5 hover:text-white' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
-                            <BookOpen size={18} className="text-slate-400" />
-                            {t('nav.pricing', 'Pricing')}
-                        </Link>
-                        <Link to="/placement-test" onClick={() => setIsSidebarOpen(false)} className={`flex items-center gap-3 rounded-2xl px-4 py-3.5 text-sm font-bold transition-all ${isTeacher ? 'text-slate-300 hover:bg-white/5 hover:text-white' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
-                            <Mic2 size={18} className="text-slate-400" />
-                            {t('nav.placementTest', 'Placement Test')}
-                        </Link>
+                        {sectionConfig.resources.map((item) => {
+                            const Icon = item.icon;
+                            const isActive = isItemActive(item);
+                            return (
+                                <Link
+                                    key={item.path}
+                                    to={item.path}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                    className={`flex items-center gap-3 rounded-2xl px-4 py-3.5 text-sm font-bold transition-all ${isActive ? sectionConfig.activeItemClass : isTeacher ? 'text-slate-300 hover:bg-white/5 hover:text-white' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}
+                                >
+                                    <Icon size={18} className={isActive ? sectionConfig.activeIconClass : 'text-slate-400'} />
+                                    {item.label}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </nav>
@@ -173,7 +257,7 @@ const MainLayout: React.FC = () => {
                             className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-xs font-black transition-all ${isTeacher ? 'bg-red-500/10 text-red-200 hover:bg-red-500/20' : 'bg-red-50 text-red-600 hover:bg-red-100'}`}
                         >
                             <LogOut size={14} />
-                            {t('nav.logout', 'Logout')}
+                            {t('nav.logout')}
                         </button>
                     </div>
                 </div>
@@ -207,15 +291,13 @@ const MainLayout: React.FC = () => {
                         </div>
 
                         <div className="flex items-center gap-3">
-                            <div className="hidden lg:block">
-                                <LanguageSwitcher />
-                            </div>
+                            <LanguageSwitcher />
 
                             <div className="relative hidden md:block">
                                 <Search className={`absolute ${isRtl ? 'right-3' : 'left-3'} top-1/2 -translate-y-1/2 text-slate-400`} size={16} />
                                 <input
                                     type="text"
-                                    placeholder={isTeacher ? t('nav.searchTeacher', 'Search students, alerts or plans...') : t('nav.searchStudent', 'Search curriculum...')}
+                                    placeholder={isTeacher ? t('nav.searchTeacher') : section === 'parent' ? t('nav.searchParent') : t('nav.searchStudent')}
                                     className={`h-11 w-72 rounded-2xl border border-slate-100 bg-slate-50 ${isRtl ? 'pr-10 pl-4 text-right' : 'pl-10 pr-4'} text-sm font-medium transition-all outline-none ${sectionConfig.searchFocusClass}`}
                                 />
                             </div>

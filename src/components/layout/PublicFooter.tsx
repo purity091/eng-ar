@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, Globe, Heart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +10,7 @@ const PublicFooter: React.FC = () => {
         <footer className="border-t border-slate-100 bg-white px-6 py-12" dir={i18n.dir()}>
             <div className="mx-auto max-w-7xl">
                 <div className="grid gap-12 lg:grid-cols-[1.5fr,1fr,1fr]">
-                    <div className="space-y-6 text-right">
+                    <div className={`space-y-6 ${i18n.dir() === 'rtl' ? 'text-right' : 'text-left'}`}>
                         <div className={`flex items-center gap-3 ${i18n.dir() === 'rtl' ? 'justify-end' : 'justify-start'}`}>
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-white shadow-md">
                                 <Sparkles size={20} className="text-indigo-400" />

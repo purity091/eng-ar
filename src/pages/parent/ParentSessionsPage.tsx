@@ -2,10 +2,17 @@
 import { useTranslation } from 'react-i18next';
 import { CalendarClock, Video } from 'lucide-react';
 import SectionHeader from '../../components/platform/SectionHeader';
-import { parentSessions } from '../../constants/platformData';
 
 const ParentSessionsPage: React.FC = () => {
     const { t } = useTranslation();
+    const sessions = t('appPages.parent.sessions.records', { returnObjects: true }) as Array<{
+        day: string;
+        time: string;
+        title: string;
+        mode: string;
+        status: string;
+        tone: 'emerald' | 'amber';
+    }>;
 
     return (
         <div className="space-y-8 pb-16">
@@ -16,7 +23,7 @@ const ParentSessionsPage: React.FC = () => {
             />
 
             <div className="space-y-4">
-                {parentSessions.map((session) => (
+                {sessions.map((session) => (
                     <div key={`${session.day}-${session.time}`} className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
                         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                             <div className="flex items-center gap-4">
@@ -29,8 +36,8 @@ const ParentSessionsPage: React.FC = () => {
                                 </div>
                             </div>
                             <div className="rounded-2xl bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">{session.mode}</div>
-                            <div className={`rounded-full px-4 py-2 text-sm font-bold ${session.status === 'مكتملة' ? 'bg-emerald-100 text-emerald-700' : 'bg-orange-100 text-orange-700'}`}>
-                                {session.status === 'مكتملة' ? t('appPages.parent.sessions.completed') : session.status}
+                            <div className={`rounded-full px-4 py-2 text-sm font-bold ${session.tone === 'emerald' ? 'bg-emerald-100 text-emerald-700' : 'bg-orange-100 text-orange-700'}`}>
+                                {session.status}
                             </div>
                             <button className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-5 py-3 font-bold text-white">
                                 <Video size={18} />

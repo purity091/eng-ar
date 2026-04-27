@@ -2,10 +2,15 @@
 import { useTranslation } from 'react-i18next';
 import { PlayCircle, Waves } from 'lucide-react';
 import SectionHeader from '../../components/platform/SectionHeader';
-import { audioProgress } from '../../constants/platformData';
 
 const ChildAudioProgressPage: React.FC = () => {
     const { t } = useTranslation();
+    const records = t('appPages.parent.audioProgress.records', { returnObjects: true }) as Array<{
+        label: string;
+        date: string;
+        score: number;
+        note: string;
+    }>;
 
     return (
         <div className="space-y-8 pb-16">
@@ -16,7 +21,7 @@ const ChildAudioProgressPage: React.FC = () => {
             />
 
             <div className="grid gap-6 lg:grid-cols-2">
-                {audioProgress.map((item) => (
+                {records.map((item) => (
                     <div key={item.label} className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
                         <div className="mb-4 flex items-center justify-between">
                             <div>
