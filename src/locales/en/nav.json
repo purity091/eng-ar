@@ -51,6 +51,12 @@
     "schedule": "Schedule",
     "curriculum": "Curriculum",
     "subscriptions": "Subscriptions",
+    "users": "Users",
+    "content": "Content",
+    "review": "Review Queue",
+    "applications": "Teacher Applications",
+    "settings": "Settings",
+    "profile": "Admin Profile",
     "platform": "Platform"
   }
 }

@@ -866,6 +866,7 @@
   },
   "admin": {
     "dashboard": {
+      "eyebrow": "الإدارة / مركز التحكم",
       "title": "نظرة عامة",
       "description": "مرحبًا بك في لوحة التحكم. إليك ملخص أداء المنصة اليوم.",
       "totalStudents": "إجمالي الطلاب",
@@ -873,58 +874,164 @@
       "viewedLessons": "الدروس المشاهدة",
       "contentReports": "بلاغات المحتوى",
       "recentActivity": "النشاط الأخير",
-      "quickActions": "إجراءات سريعة",
-      "addBook": "إضافة كتاب جديد",
-      "inviteTeacher": "دعوة معلم",
-      "exportReports": "تصدير التقارير",
+      "commandCenter": "نبض التشغيل",
+      "commandCenterDesc": "مؤشرات عالية الأهمية للحضور والاستيعاب والمراجعات والاحتفاظ.",
+      "queueTitle": "قائمة المراجعة",
+      "queueDesc": "عناصر تحتاج قرارًا بشريًا خلال نافذة التشغيل الحالية.",
+      "quickActions": "مركز الإجراءات",
+      "quickActionsDesc": "اختصارات للقرارات الإدارية الأكثر تكرارًا.",
+      "addBook": "مزامنة أصول المنهج",
+      "inviteTeacher": "إعادة موازنة حمل المعلمين",
+      "exportReports": "مراجعة مخاطر التجديد",
+      "snapshot": "تصدير لقطة تشغيلية",
       "newStudentJoined": "طالب جديد انضم للمنصة",
       "newStudentJoinedDesc": "تم تسجيل حساب جديد بواسطة أحمد محمد في الصف العاشر.",
-      "twoMinutesAgo": "منذ دقيقتين"
+      "twoMinutesAgo": "منذ دقيقتين",
+      "attendanceHealth": "صحة الحضور",
+      "slotsUtilization": "استغلال الفترات",
+      "pendingReviews": "المراجعات المعلقة",
+      "retentionForecast": "توقع الاحتفاظ",
+      "urgent": "عاجل",
+      "monitor": "تحت المراقبة",
+      "healthy": "صحي"
     },
     "students": {
       "eyebrow": "Admin / Students",
       "title": "إدارة الطلاب",
       "description": "الجدول الأساسي للطلاب في MVP: بيانات عامة، مستوى، خطة، وحالة.",
+      "searchPlaceholder": "ابحث بالطالب أو ولي الأمر أو الدولة",
+      "overviewTitle": "نظرة على المجموعة",
+      "overviewDesc": "راقب صحة المحفظة قبل الانتقال إلى التدخل على مستوى الطالب.",
+      "totalLabel": "إجمالي الطلاب",
+      "watchlistLabel": "قائمة المتابعة",
+      "growthLabel": "الأعلى أداءً",
       "student": "الطالب",
+      "country": "الدولة",
       "age": "العمر",
       "grade": "الصف",
       "level": "المستوى",
       "plan": "الخطة",
+      "engagement": "التفاعل",
+      "attendance": "الحضور",
+      "renewal": "التجديد",
+      "owner": "المشرف",
+      "action": "إجراء",
       "status": "الحالة",
-      "active": "نشط"
+      "active": "نشط",
+      "healthy": "صحي",
+      "watch": "متابعة",
+      "growth": "نمو قوي",
+      "risk": "معرّض للخطر",
+      "openProfile": "فتح الملف"
     },
     "teachers": {
       "eyebrow": "Admin / Teachers",
       "title": "إدارة المعلمين",
       "description": "بطاقات سريعة للتخصص واللهجة والطاقة اليومية والتقييم والحمل الحالي.",
+      "qualityTitle": "جودة التدريس والطاقة الاستيعابية",
+      "qualityDesc": "وازن بين الحمل ونتيجة الجودة ونوافذ المراجعة داخل فريق التدريس النشط.",
       "accent": "اللهجة",
       "dailyCapacity": "القدرة اليومية",
       "sessions": "حصة",
       "rating": "التقييم",
-      "currentLoad": "الحمل الحالي"
+      "currentLoad": "الحمل الحالي",
+      "qaScore": "نتيجة الجودة",
+      "focus": "محور المتابعة",
+      "nextReview": "المراجعة القادمة",
+      "full": "شبه ممتلئ",
+      "balanced": "متوازن",
+      "light": "طاقة متاحة"
     },
     "schedule": {
       "eyebrow": "Admin / Schedule",
       "title": "إدارة الجداول",
       "description": "واجهة أولية لتوزيع الحصص عبر الأسبوع مع تنبيه التجاوز.",
-      "sessions": "حصة"
+      "sessions": "حصة",
+      "alertTitle": "تصعيد الأحمال",
+      "weeklyLoad": "لوحة الحمل الأسبوعي",
+      "weeklyLoadDesc": "كثافة الحصص اليومية مقابل الطاقة المتاحة للمعلمين.",
+      "capacity": "الطاقة",
+      "peakWindow": "ذروة التشغيل",
+      "overloaded": "محمّل فوق الحد",
+      "healthy": "متوازن",
+      "recommendedMoves": "الإجراءات الموصى بها",
+      "openTeacherBoard": "فتح لوحة المعلمين",
+      "shiftGroupSession": "نقل الحصص الجماعية",
+      "freezeBookings": "إيقاف الحجوزات الجديدة"
     },
     "curriculum": {
       "eyebrow": "Admin / Curriculum",
       "title": "إدارة المناهج والمسارات",
       "description": "إدارة الوحدات والدروس في نسخة أولى مبسطة.",
+      "libraryTitle": "مكتبة المنهج",
+      "libraryDesc": "رؤية واضحة لملكية المسارات وجاهزية الإطلاق وتغطية المهارات.",
+      "releaseQueueTitle": "قائمة الإطلاق",
+      "releaseQueueDesc": "وحدات وحزم تنتظر الجودة أو الأصول أو اعتماد النشر.",
+      "owner": "المالك",
+      "status": "الحالة",
+      "coverage": "التغطية",
+      "lastUpdate": "آخر تحديث",
       "targetWords": "الكلمات المستهدفة",
-      "skills": "المهارات"
+      "skills": "المهارات",
+      "openUnit": "فتح الوحدة",
+      "publish": "نشر",
+      "review": "مراجعة",
+      "published": "منشور",
+      "active": "نشط"
     },
     "subscriptions": {
       "eyebrow": "Admin / Subscriptions",
       "title": "متابعة الاشتراكات",
       "description": "ربط جودة الأداء بمؤشرات الاحتفاظ والتجديد.",
+      "healthTitle": "صحة التجديد",
+      "healthDesc": "اكتشف مخاطر الإيراد مبكرًا عبر دمج الحضور مع جودة التقدم.",
+      "package": "الباقة",
       "student": "الطالب",
       "growthScore": "Growth Score",
       "attendance": "الحضور",
+      "renewalProbability": "احتمال التجديد",
+      "nextBilling": "الفوترة القادمة",
       "expectedStatus": "الحالة المتوقعة",
-      "intervention": "يحتاج تدخل"
+      "intervention": "يحتاج تدخل",
+      "likelyRenew": "مرشح للتجديد",
+      "revenueRisk": "إيراد معرّض للخطر",
+      "activePlans": "الخطط النشطة",
+      "healthy": "صحي",
+      "watch": "متابعة",
+      "risk": "خطر",
+      "interveneNow": "تدخل الآن",
+      "sendOffer": "إرسال عرض",
+      "callFamily": "اتصال بالأسرة"
+    },
+    "users": {
+      "eyebrow": "الإدارة / المستخدمون",
+      "title": "التحكم في وصول المستخدمين",
+      "description": "إدارة المشغلين والصلاحيات ونطاق الوصول وحالة الحساب من مكان واحد."
+    },
+    "content": {
+      "eyebrow": "الإدارة / المحتوى",
+      "title": "تشغيل المحتوى",
+      "description": "متابعة الكتب والدروس والموارد عبر مراحل النشر المختلفة."
+    },
+    "review": {
+      "eyebrow": "الإدارة / المراجعة",
+      "title": "قائمة المراجعة",
+      "description": "اعتماد أو توجيه أو تصعيد الأصول التعليمية قبل الإطلاق."
+    },
+    "applications": {
+      "eyebrow": "الإدارة / الطلبات",
+      "title": "طلبات المعلمين",
+      "description": "راجع طلبات المعلمين الواردة وحرّك أفضل المرشحين إلى الخطوة التالية."
+    },
+    "settings": {
+      "eyebrow": "الإدارة / الإعدادات",
+      "title": "إعدادات المنصة",
+      "description": "التحكم في السلوك العام للمنصة والحَوْكمة والإعدادات التشغيلية الافتراضية."
+    },
+    "profile": {
+      "eyebrow": "الإدارة / الملف الشخصي",
+      "title": "الملف الإداري",
+      "description": "هوية المشغّل ونطاق صلاحياته وآخر نشاطاته الإدارية."
     }
   }
 }

@@ -56,6 +56,12 @@ import AdminTeachersPage from './pages/admin/AdminTeachersPage';
 import AdminSchedulePage from './pages/admin/AdminSchedulePage';
 import AdminCurriculumPage from './pages/admin/AdminCurriculumPage';
 import AdminSubscriptionsPage from './pages/admin/AdminSubscriptionsPage';
+import AdminUsersPage from './pages/admin/AdminUsersPage';
+import AdminContentPage from './pages/admin/AdminContentPage';
+import AdminReviewPage from './pages/admin/AdminReviewPage';
+import AdminApplicationsPage from './pages/admin/AdminApplicationsPage';
+import AdminSettingsPage from './pages/admin/AdminSettingsPage';
+import AdminProfilePage from './pages/admin/AdminProfilePage';
 
 const AppRoutes: React.FC = () => {
     const { isAuthenticated } = useApp();
@@ -138,6 +144,12 @@ const AppRoutes: React.FC = () => {
                 <Route path="schedule" element={<AdminSchedulePage />} />
                 <Route path="curriculum" element={<AdminCurriculumPage />} />
                 <Route path="subscriptions" element={<AdminSubscriptionsPage />} />
+                <Route path="users" element={<AdminUsersPage />} />
+                <Route path="content" element={<AdminContentPage />} />
+                <Route path="review" element={<AdminReviewPage />} />
+                <Route path="applications" element={<AdminApplicationsPage />} />
+                <Route path="settings" element={<AdminSettingsPage />} />
+                <Route path="profile" element={<AdminProfilePage />} />
             </Route>
 
             <Route

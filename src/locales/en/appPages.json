@@ -866,6 +866,7 @@
   },
   "admin": {
     "dashboard": {
+      "eyebrow": "Admin / Command Center",
       "title": "Overview",
       "description": "Welcome to the admin dashboard. Here is today’s platform performance summary.",
       "totalStudents": "Total students",
@@ -873,58 +874,164 @@
       "viewedLessons": "Viewed lessons",
       "contentReports": "Content reports",
       "recentActivity": "Recent activity",
-      "quickActions": "Quick actions",
-      "addBook": "Add new book",
-      "inviteTeacher": "Invite teacher",
-      "exportReports": "Export reports",
+      "commandCenter": "Operational pulse",
+      "commandCenterDesc": "High-signal metrics for attendance quality, utilization, reviews, and retention.",
+      "queueTitle": "Review queue",
+      "queueDesc": "Items that need a human decision in the next operating window.",
+      "quickActions": "Action center",
+      "quickActionsDesc": "Shortcuts for the most frequent admin decisions.",
+      "addBook": "Sync curriculum assets",
+      "inviteTeacher": "Rebalance teacher load",
+      "exportReports": "Review renewal risks",
+      "snapshot": "Export operating snapshot",
       "newStudentJoined": "New student joined the platform",
       "newStudentJoinedDesc": "A new account was registered by Ahmed Mohammed in grade 10.",
-      "twoMinutesAgo": "2 minutes ago"
+      "twoMinutesAgo": "2 minutes ago",
+      "attendanceHealth": "Attendance health",
+      "slotsUtilization": "Slots utilization",
+      "pendingReviews": "Pending reviews",
+      "retentionForecast": "Retention forecast",
+      "urgent": "Urgent",
+      "monitor": "Monitor",
+      "healthy": "Healthy"
     },
     "students": {
       "eyebrow": "Admin / Students",
       "title": "Students management",
       "description": "Core MVP student table: profile, level, plan, and status.",
+      "searchPlaceholder": "Search by student, guardian, or country",
+      "overviewTitle": "Cohort overview",
+      "overviewDesc": "Track portfolio health before drilling into student-level intervention.",
+      "totalLabel": "Total students",
+      "watchlistLabel": "Watchlist",
+      "growthLabel": "Top performers",
       "student": "Student",
+      "country": "Country",
       "age": "Age",
       "grade": "Grade",
       "level": "Level",
       "plan": "Plan",
+      "engagement": "Engagement",
+      "attendance": "Attendance",
+      "renewal": "Renewal",
+      "owner": "Owner",
+      "action": "Action",
       "status": "Status",
-      "active": "Active"
+      "active": "Active",
+      "healthy": "Healthy",
+      "watch": "Watch",
+      "growth": "Growth",
+      "risk": "At risk",
+      "openProfile": "Open profile"
     },
     "teachers": {
       "eyebrow": "Admin / Teachers",
       "title": "Teachers management",
       "description": "Teacher cards for specialty, accent, capacity, rating, and current load.",
+      "qualityTitle": "Teaching quality and capacity",
+      "qualityDesc": "Balance load, QA score, and next review windows across the active teaching pool.",
       "accent": "Accent",
       "dailyCapacity": "Daily capacity",
       "sessions": "sessions",
       "rating": "Rating",
-      "currentLoad": "Current load"
+      "currentLoad": "Current load",
+      "qaScore": "QA score",
+      "focus": "Focus",
+      "nextReview": "Next review",
+      "full": "Near full",
+      "balanced": "Balanced",
+      "light": "Light capacity"
     },
     "schedule": {
       "eyebrow": "Admin / Schedule",
       "title": "Schedule management",
       "description": "Initial weekly scheduling interface with overload alerting.",
-      "sessions": "Sessions"
+      "sessions": "Sessions",
+      "alertTitle": "Load escalation",
+      "weeklyLoad": "Weekly load board",
+      "weeklyLoadDesc": "Daily session density against available teacher capacity.",
+      "capacity": "Capacity",
+      "peakWindow": "Peak window",
+      "overloaded": "Overloaded",
+      "healthy": "Healthy",
+      "recommendedMoves": "Recommended moves",
+      "openTeacherBoard": "Open teacher board",
+      "shiftGroupSession": "Shift group sessions",
+      "freezeBookings": "Freeze new bookings"
     },
     "curriculum": {
       "eyebrow": "Admin / Curriculum",
       "title": "Curriculum and tracks",
       "description": "Manage units and lessons in a simple first version.",
+      "libraryTitle": "Curriculum library",
+      "libraryDesc": "Visibility into track ownership, release readiness, and skill coverage.",
+      "releaseQueueTitle": "Release queue",
+      "releaseQueueDesc": "Units and packs waiting for QA, assets, or publishing approval.",
+      "owner": "Owner",
+      "status": "Status",
+      "coverage": "Coverage",
+      "lastUpdate": "Last update",
       "targetWords": "Target words",
-      "skills": "Skills"
+      "skills": "Skills",
+      "openUnit": "Open unit",
+      "publish": "Publish",
+      "review": "Review",
+      "published": "Published",
+      "active": "Active"
     },
     "subscriptions": {
       "eyebrow": "Admin / Subscriptions",
       "title": "Subscriptions overview",
       "description": "Connect progress quality to retention and renewal expectations.",
+      "healthTitle": "Renewal health",
+      "healthDesc": "Spot revenue risk early by combining attendance and growth quality signals.",
+      "package": "Package",
       "student": "Student",
       "growthScore": "Growth score",
       "attendance": "Attendance",
+      "renewalProbability": "Renewal probability",
+      "nextBilling": "Next billing",
       "expectedStatus": "Expected status",
-      "intervention": "Needs intervention"
+      "intervention": "Needs intervention",
+      "likelyRenew": "Likely renew",
+      "revenueRisk": "Revenue at risk",
+      "activePlans": "Active plans",
+      "healthy": "Healthy",
+      "watch": "Watch",
+      "risk": "At risk",
+      "interveneNow": "Intervene now",
+      "sendOffer": "Send offer",
+      "callFamily": "Call family"
+    },
+    "users": {
+      "eyebrow": "Admin / Users",
+      "title": "User access control",
+      "description": "Manage platform operators, scope, and account status from one place."
+    },
+    "content": {
+      "eyebrow": "Admin / Content",
+      "title": "Content operations",
+      "description": "Track books, lessons, and resources across publishing states."
+    },
+    "review": {
+      "eyebrow": "Admin / Review",
+      "title": "Review queue",
+      "description": "Approve, route, or escalate learning assets before release."
+    },
+    "applications": {
+      "eyebrow": "Admin / Applications",
+      "title": "Teacher applications",
+      "description": "Review incoming teacher applications and move the best candidates forward."
+    },
+    "settings": {
+      "eyebrow": "Admin / Settings",
+      "title": "Platform settings",
+      "description": "Control platform-wide behavior, governance, and operating defaults."
+    },
+    "profile": {
+      "eyebrow": "Admin / Profile",
+      "title": "Admin profile",
+      "description": "Operator identity, scope, and recent administrative activity."
     }
   }
 }

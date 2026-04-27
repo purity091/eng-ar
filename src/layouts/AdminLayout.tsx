@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Bell, BookOpen, CalendarDays, GraduationCap, Home, LogOut, Menu, Users, Wallet, X } from 'lucide-react';
+import { Bell, BookOpen, CalendarDays, FileCheck2, GraduationCap, Home, LogOut, Menu, Settings2, ShieldCheck, UserCircle2, Users, Wallet, X } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useApp } from '../contexts/AppContext';
@@ -24,6 +24,12 @@ const AdminLayout: React.FC = () => {
         { label: t('nav.admin.schedule'), path: '/admin/schedule', icon: CalendarDays },
         { label: t('nav.admin.curriculum'), path: '/admin/curriculum', icon: BookOpen },
         { label: t('nav.admin.subscriptions'), path: '/admin/subscriptions', icon: Wallet },
+        { label: t('nav.admin.users'), path: '/admin/users', icon: ShieldCheck },
+        { label: t('nav.admin.content'), path: '/admin/content', icon: BookOpen },
+        { label: t('nav.admin.review'), path: '/admin/review', icon: FileCheck2 },
+        { label: t('nav.admin.applications'), path: '/admin/applications', icon: GraduationCap },
+        { label: t('nav.admin.settings'), path: '/admin/settings', icon: Settings2 },
+        { label: t('nav.admin.profile'), path: '/admin/profile', icon: UserCircle2 },
     ];
 
     const Sidebar = () => (
